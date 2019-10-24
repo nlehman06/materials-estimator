@@ -1,0 +1,25 @@
+/* Chrome specific download menu tweaks */
+#downloadList .listIcon {
+	padding: 3px 0px 3px 0px;
+}
+
+#furnitureList .listIcon {
+	padding: 3px 0px 1px 0px;
+}
+.listIcon {
+	padding: 2px 0px 5px 0px;
+	vertical-align: top;
+}
+
+.listIcon img {
+	/*
+	padding: 0px 0px 0px 0px;
+	display: inline-block;
+	*/
+	vertical-align: middle;
+}
+
+#downloadList ul, #downloadList ul ul, #furnitureList ul, #furnitureList ul ul {
+	left: 12px;
+	top: -5px;
+}

@@ -1,0 +1,112 @@
+
+if (typeof Paperless != "function") {
+  function Paperless() {
+    this.lastName = null;
+    this.errorText = null;
+    this.statementNo = false;
+    this.custNo = null;
+    this.invoiceYes = false;
+    this.email = null;
+    this.activationFlag = false;
+    this.statementYes = false;
+    this.errorFlag = null;
+    this.custName = null;
+    this.invoiceNo = false;
+    this.firstName = null;
+  }
+}
+
+// Provide a default path to dwr.engine
+if (dwr == null) var dwr = {};
+if (dwr.engine == null) dwr.engine = {};
+if (DWREngine == null) var DWREngine = dwr.engine;
+
+if (QuickSearchLogin == null) var QuickSearchLogin = {};
+QuickSearchLogin._path = '/servlet/dwr';
+QuickSearchLogin.destroy = function(callback) {
+  dwr.engine._execute(QuickSearchLogin._path, 'QuickSearchLogin', 'destroy', callback);
+}
+QuickSearchLogin.getInitParameter = function(p0, callback) {
+  dwr.engine._execute(QuickSearchLogin._path, 'QuickSearchLogin', 'getInitParameter', p0, callback);
+}
+QuickSearchLogin.getInitParameterNames = function(callback) {
+  dwr.engine._execute(QuickSearchLogin._path, 'QuickSearchLogin', 'getInitParameterNames', callback);
+}
+QuickSearchLogin.getServletConfig = function(callback) {
+  dwr.engine._execute(QuickSearchLogin._path, 'QuickSearchLogin', 'getServletConfig', callback);
+}
+QuickSearchLogin.getServletContext = function(callback) {
+  dwr.engine._execute(QuickSearchLogin._path, 'QuickSearchLogin', 'getServletContext', callback);
+}
+QuickSearchLogin.getServletInfo = function(callback) {
+  dwr.engine._execute(QuickSearchLogin._path, 'QuickSearchLogin', 'getServletInfo', callback);
+}
+QuickSearchLogin.init = function(callback) {
+  dwr.engine._execute(QuickSearchLogin._path, 'QuickSearchLogin', 'init', false, callback);
+}
+QuickSearchLogin.init = function(callback) {
+  dwr.engine._execute(QuickSearchLogin._path, 'QuickSearchLogin', 'init', callback);
+}
+QuickSearchLogin.log = function(p0, callback) {
+  dwr.engine._execute(QuickSearchLogin._path, 'QuickSearchLogin', 'log', p0, callback);
+}
+QuickSearchLogin.log = function(p0, p1, callback) {
+  dwr.engine._execute(QuickSearchLogin._path, 'QuickSearchLogin', 'log', p0, p1, callback);
+}
+QuickSearchLogin.service = function(p0, p1, callback) {
+  dwr.engine._execute(QuickSearchLogin._path, 'QuickSearchLogin', 'service', p0, p1, callback);
+}
+QuickSearchLogin.getServletName = function(callback) {
+  dwr.engine._execute(QuickSearchLogin._path, 'QuickSearchLogin', 'getServletName', callback);
+}
+QuickSearchLogin.doGet = function(callback) {
+  dwr.engine._execute(QuickSearchLogin._path, 'QuickSearchLogin', 'doGet', false, false, callback);
+}
+QuickSearchLogin.doPost = function(callback) {
+  dwr.engine._execute(QuickSearchLogin._path, 'QuickSearchLogin', 'doPost', false, false, callback);
+}
+QuickSearchLogin.subtract = function(p0, p1, callback) {
+  dwr.engine._execute(QuickSearchLogin._path, 'QuickSearchLogin', 'subtract', p0, p1, callback);
+}
+QuickSearchLogin.setError = function(p0, callback) {
+  dwr.engine._execute(QuickSearchLogin._path, 'QuickSearchLogin', 'setError', p0, callback);
+}
+QuickSearchLogin.getError = function(callback) {
+  dwr.engine._execute(QuickSearchLogin._path, 'QuickSearchLogin', 'getError', callback);
+}
+QuickSearchLogin.loadDefaults = function(callback) {
+  dwr.engine._execute(QuickSearchLogin._path, 'QuickSearchLogin', 'loadDefaults', false, callback);
+}
+QuickSearchLogin.writeSuccessful = function(callback) {
+  dwr.engine._execute(QuickSearchLogin._path, 'QuickSearchLogin', 'writeSuccessful', false, callback);
+}
+QuickSearchLogin.writeSuccessfulAjax = function(callback) {
+  dwr.engine._execute(QuickSearchLogin._path, 'QuickSearchLogin', 'writeSuccessfulAjax', false, callback);
+}
+QuickSearchLogin.setup1Ajax = function(p0, p1, p2, callback) {
+  dwr.engine._execute(QuickSearchLogin._path, 'QuickSearchLogin', 'setup1Ajax', p0, p1, p2, callback);
+}
+QuickSearchLogin.setup2Ajax = function(p0, callback) {
+  dwr.engine._execute(QuickSearchLogin._path, 'QuickSearchLogin', 'setup2Ajax', p0, callback);
+}
+QuickSearchLogin.logoutAjax = function(callback) {
+  dwr.engine._execute(QuickSearchLogin._path, 'QuickSearchLogin', 'logoutAjax', callback);
+}
+QuickSearchLogin.loginAjax = function(p0, p1, p2, p3, callback) {
+  dwr.engine._execute(QuickSearchLogin._path, 'QuickSearchLogin', 'loginAjax', p0, p1, p2, p3, callback);
+}
+QuickSearchLogin.decodeLoginError = function(p0, p1, callback) {
+  dwr.engine._execute(QuickSearchLogin._path, 'QuickSearchLogin', 'decodeLoginError', p0, p1, callback);
+}
+QuickSearchLogin.getContactNameAjax = function(callback) {
+  dwr.engine._execute(QuickSearchLogin._path, 'QuickSearchLogin', 'getContactNameAjax', callback);
+}
+QuickSearchLogin.sendLoginReminderAjax = function(p0, callback) {
+  dwr.engine._execute(QuickSearchLogin._path, 'QuickSearchLogin', 'sendLoginReminderAjax', p0, callback);
+}
+QuickSearchLogin.memosLeft = function(callback) {
+  dwr.engine._execute(QuickSearchLogin._path, 'QuickSearchLogin', 'memosLeft', false, callback);
+}
+QuickSearchLogin.setStateOfOrderPage = function(callback) {
+  dwr.engine._execute(QuickSearchLogin._path, 'QuickSearchLogin', 'setStateOfOrderPage', false, callback);
+}

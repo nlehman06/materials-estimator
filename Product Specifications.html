@@ -1,0 +1,1933 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0196)https://www.memosamples.com/servlet/quickSearchSpecs.jsp?prodNo=09104445&patternPos=2&colorPos=7&chairImgKey=&backToPage=/servlet/quickSearch.jsp&favorites=&navDirection=detail&searchType=library# -->
+<html>
+
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8">
+   <meta name="GENERATOR" content="IBM WebSphere Studio">
+
+
+
+
+
+   <link rel="shortcut icon" href="https://www.memosamples.com/favicon.ico">
+   <title>Product Specifications</title>
+
+   <link href="./Product Specifications_files/momtex_styles.css" rel="stylesheet" type="text/css" media="all">
+   <link rel="stylesheet" href="./Product Specifications_files/tipTip.css" type="text/css" media="all">
+   <link rel="stylesheet" href="./Product Specifications_files/momtex.tipTip.css" type="text/css" media="all">
+   <link rel="stylesheet" href="./Product Specifications_files/jquery-ui-1.8.6.custom.css" type="text/css" media="all">
+   <link rel="stylesheet" href="./Product Specifications_files/jquery-ui-1.8.6.momtex.css" type="text/css" media="all">
+
+   <link rel="stylesheet" href="./Product Specifications_files/download_menu.css" type="text/css" media="all">
+   <script type="text/javascript">
+      var is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
+      if (is_chrome) {
+         document.write('<' + 'link rel="stylesheet" href="/css/download_menu_chrome.css?v=2" />');
+      }
+   </script>
+   <link rel="stylesheet" href="./Product Specifications_files/download_menu_chrome.css">
+
+
+   <script type="text/javascript" src="./Product Specifications_files/jquery-1.5.min.js.download"></script>
+   <script type="text/javascript" src="./Product Specifications_files/jquery.tinyscrollbar.min.js.download"></script>
+   <script type="text/javascript" src="./Product Specifications_files/jquery.tipTip.minified.js.download"></script>
+   <script type="text/javascript" src="./Product Specifications_files/jquery-ui-1.8.6.custom.min.js.download"></script>
+   <script type="text/javascript" src="./Product Specifications_files/jquery.ui.selectmenu.js.download"></script>
+
+
+   <style>
+      html {
+         scrollbar-base-color: #FFF;
+         scrollbar-track-color: #eaeaea;
+         scrollbar-track-width: 2px;
+         scrollbar-shadow-color: #CCC;
+         scrollbar-darkshadow-color: #FFF;
+         scrollbar-arrow-color: #FF690A;
+      }
+   </style>
+
+   <script type="text/javascript" src="./Product Specifications_files/QuickSearchCart.js.download"> </script>
+   <script type="text/javascript" src="./Product Specifications_files/QuickSearch.js.download"> </script>
+   <script type="text/javascript" src="./Product Specifications_files/engine.js.download"> </script>
+
+   <!--[if IE]> <link href="/css/momtex_styles_ie.css" rel="stylesheet" type="text/css"> <![endif]-->
+
+   <!--[if lt IE 8]> <link href="/css/ie7_styles.css" rel="stylesheet" type="text/css"> <![endif]-->
+   <!--[if lt IE 7]> <link href="/css/ie6_styles.css" rel="stylesheet" type="text/css"><script defer type="text/javascript" src="/js/pngfix.js"></script>
+
+<script defer type="text/javascript" src="/js/png.js"></script>
+
+<![endif]-->
+
+
+
+   <script type="text/javascript">
+
+      var zoomFabricWindow;
+      var fabricZoomed = false;
+      var zoomChairWindow;
+      var chairZoomed = false;
+      var zoomRoomWindow;
+      var roomZoomed = false;
+      var detailsViewed = false;
+
+      var fabRenderRes = 72;
+      var chairImgWidth = 375;
+
+      var curImageSetId = "";
+
+      var curProdDesc2 = "";
+
+      var renderDescArr = new Array(2);
+      var renderKeyArr = new Array(2);
+      var renderResArr = new Array(2);
+
+      renderKeyArr[0] = "173_1333_702";
+      renderDescArr[0] = "executive";
+      renderResArr[0] = "72";
+
+      renderKeyArr[1] = "173_974_703";
+      renderDescArr[1] = "lounge";
+      renderResArr[1] = "72";
+
+
+      var curImgName = 'ace-hot.jpg';
+      var curProdNo = '09104445';
+      var brand = '81';
+
+      $(window).unload(function () {
+
+         if (fabricZoomed) {
+            zoomFabricWindow.close();
+         }
+
+         if (chairZoomed) {
+            zoomChairWindow.close();
+         }
+
+         if (detailsViewed) {
+            detailsWindow.close();
+         }
+
+      });
+
+      $(document).ready(function () {
+
+
+
+         $("#sysModList").removeClass("noshow");
+
+         $("select").selectmenu({
+            style: "dropdown"
+         });
+
+
+         $('#scrollbar_thumbs').tinyscrollbar({ sizethumb: 15, size: 205 });
+
+
+         $(".icon_links").tipTip({
+            defaultPosition: "right",
+            fadeIn: 200,
+            fadeOut: 400
+         });
+
+
+         $(".individual_thumbs").tipTip({
+            defaultPosition: "top",
+            fadeIn: 200,
+            fadeOut: 400
+         });
+
+         $("#backarrow").tipTip({
+            defaultPosition: "left",
+            fadeIn: 200,
+            fadeOut: 400
+         });
+
+         $("#cart_event").tipTip({
+            defaultPosition: "bottom",
+            fadeIn: 200,
+            fadeOut: 400
+         });
+
+         $("#fav_event").tipTip({
+            defaultPosition: "left",
+            fadeIn: 200,
+            fadeOut: 400
+         });
+
+         $(function () {
+            getInitialCartSize(0);
+            fixEscapedNames();
+         });
+
+
+
+         //Download menu animation				
+         $('#downloadList ul, #furnitureList ul').css({ display: "none" }); //Fix Opera
+
+         $('#downloadList li, #furnitureList li').hover(function () {
+
+            var listObj = $(this);
+            var iconObj = listObj.find('span:first');
+
+            listObj.addClass('addPosition');
+
+            setTimeout(function () {
+               if (listObj.hasClass('addPosition')) {
+                  listObj.find('ul:first').stop(true, true)
+                     .css({ visibility: "visible", display: "none" }).show(400);
+                  iconObj.addClass('listIconActive');
+               }
+            }, 250);
+
+         }, function () {
+
+            var listObj = $(this);
+
+            listObj.find('span:first').removeClass('listIconActive');
+            listObj.find('ul:first').stop(true, true)
+               .css({ visibility: "hidden" }).hide(400);
+            listObj.removeClass('addPosition');
+         });
+
+
+         $('.listTab a').hover(function () {
+            $(this).children('img').css({ visibility: "visible" });
+         }, function () {
+            $(this).children('img').css({ visibility: "hidden" });
+         });
+
+
+      });
+
+      function doPost() {
+         window.document.forms[0].submit();
+      }
+
+      function doPostBack() {
+
+         $("#pageBack").submit();
+      }
+
+      function fixEscapedNames() {
+
+         var docImg = document.getElementsByTagName('img');
+
+         for (var i = 0; i < docImg.length; i++) {
+            docImg[i].alt = unescape(docImg[i].alt);
+            docImg[i].title = unescape(docImg[i].title);
+         }
+
+         document.getElementById('product_name_color').innerHTML = unescape(document.getElementById('product_name_color').innerHTML);
+      }
+
+      function viewDetails(printFlag) {
+
+         var prodNo = document.getElementById("colorWaySku").value;
+         var patternPos = document.getElementById("itemToAdd").value;
+         var colorPos = document.getElementById("colorPos").value;
+         var fromFav = "";
+         var siteBrand = document.getElementById("siteBrand").value;
+         var url = "/servlet/quickSearchDetails.jsp?prodNo=" + prodNo
+            + "&patternPos=" + patternPos + "&colorPos=" + colorPos
+            + "&printFlag=" + printFlag
+            + "&favorites=" + fromFav
+            + "&brand=" + siteBrand;
+
+         if (detailsViewed) {
+            detailsWindow.close();
+         }
+         detailsWindow = window.open(url, 'details', 'width=800,height=500,top=0,left=0,scrollbars=yes,resizable=yes');
+         detailsViewed = true;
+      }
+
+      function maxWarning() {
+         displayError("You have exceeded the maximum number of memo samples allowed per order.");
+      }
+
+      function swapPicture(imgName, colorName, productNo, elementNo, imageSetId, prodDesc2) {
+
+         colorName = unescape(colorName);
+
+         curImgName = imgName; // This is the image name for the hi res download link
+         curProdNo = productNo; // This is the product # for the cleaning guide download link
+         curImageSetId = imageSetId; // This is the Scene7 room scene image set ID
+         curProdDesc2 = prodDesc2; // This is the WSG alt prod desc
+         var showImgName = imgName;
+         var imgURL;
+         if (document.getElementById("showChair").value == "Y") {
+
+            var dotPos = imgName.indexOf(".");
+            var subImgName = imgName.substring(0, dotPos);
+            /*
+            imgURL = "https://themomgroup.scene7.com/ir/render/MomTexRender/"
+                        + document.getElementById("chairImgKey").value
+                        + "-800?obj=chair&src="
+                        + subImgName
+                        + "&res="
+                        + fabRenderRes
+                        //+ "&wid=300&hei=375&sharpen=1";
+                        + "&wid="
+                        + chairImgWidth
+                        + "&hei=375&sharpen=1";
+            */
+            /*
+            imgURL = "https://themomgroup.scene7.com/ir/render/MomTexRender/"
+                  + document.getElementById("chairImgKey").value
+                  + "?resmode=sharp2&hei=375&obj=chair&src="
+                  + subImgName
+                  + "&res=40&sharpen=1}"
+                  ;
+            */
+            var imgURL = "https://themomgroup.scene7.com/ir/render/MomTexRender/"
+               + document.getElementById("chairImgKey").value
+               + "-800?obj=chair&src="
+               + subImgName
+               + "&res=72&wid=375&hei=375&sharpen=1"
+               ;
+
+         } else {
+            imgURL = "/images/fabrics/s";
+            imgURL = imgURL + showImgName;
+         }
+
+         var fullNameStr = "Ace - " + colorName;
+         document.getElementById("product_name_color").innerHTML = unescape(fullNameStr);
+         document.getElementById("product_alt_name").innerHTML = prodDesc2;
+         document.getElementById("fullProdName").value = unescape(fullNameStr);
+         document.getElementById("colorWayToAdd").value = elementNo;
+         document.getElementById("colorWaySku").value = productNo;
+         document.getElementById("largePic").src = imgURL;
+         document.getElementById("stdImgHidden").value = imgName;
+         if (document.getElementById("colorPos").value != "-1") {
+            document.getElementById("colorPos").value = elementNo;
+         }
+      }
+
+      function swapChair(newChairImgKey) {
+
+         var thisShowChair = document.getElementById("showChair").value;
+
+         if (newChairImgKey == "switch") {
+
+            toggleShowChair();
+
+         } else {
+
+            document.getElementById("chairImgKey").value = newChairImgKey;
+
+            var arrPos = $.inArray(newChairImgKey, renderKeyArr);
+            if (arrPos < 0) {
+               arrPos = 0;
+            }
+            fabRenderRes = renderResArr[arrPos];
+
+            var imgName = document.getElementById("stdImgHidden").value;
+            var dotPos = imgName.indexOf(".");
+            var subImgName = imgName.substring(0, dotPos);
+
+            var imgURL = "https://themomgroup.scene7.com/ir/render/MomTexRender/"
+               + document.getElementById("chairImgKey").value
+               + "-800?obj=chair&src="
+               + subImgName
+               + "&res=72&wid=375&hei=375&sharpen=1"
+               ;
+            document.getElementById("largePic").src = imgURL;
+
+            if (thisShowChair != "Y") {
+               toggleShowChair();
+            }
+
+         }
+      }
+
+      function zoomFabric() {
+
+         var imgName = document.getElementById("stdImgHidden").value;
+         var dotPos = imgName.indexOf(".");
+         var subImgName = imgName.substring(0, dotPos);
+         var zoomURL = "http://themomgroup.scene7.com/s7viewers/html5/BasicZoomViewer.html";
+         var zoomURLparms = "closeButton=1&serverUrl=http://themomgroup.scene7.com/is/image/&config=Scene7SharedAssets/Universal_HTML5_Zoom_light&contenturl=http://themomgroup.scene7.com/skins/&asset=MomTexRender/z" + subImgName;
+         var newURL = "/servlet/quickSearchZoomHTML5.jsp?newURL=" + escape(zoomURL) + "&" + zoomURLparms;
+         if (fabricZoomed) {
+            zoomFabricWindow.close();
+         }
+
+         // Fixes dual-screen position                         Most browsers      Firefox
+         var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;
+         var dualScreenTop = window.screenTop != undefined ? window.screenTop : screen.top;
+
+         cur_width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
+         cur_height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+
+         var w = 625;
+         var h = 750;
+         var left = ((cur_width / 2) - (w / 2)) + dualScreenLeft;
+         var top = ((cur_height / 2) - (h / 2)) + dualScreenTop;
+
+         zoomFabricWindow = window.open(newURL, 'zoomFabric', 'width=' + w + ',height=' + h + ',top=' + top + ',left=' + left + ',scrollbars=no,location=no,toolbar=no,status=no,menubar=no');
+         fabricZoomed = true;
+      }
+
+
+      function zoomChair() {
+
+         var imgName = document.getElementById("stdImgHidden").value;
+         var dotPos = imgName.indexOf(".");
+         var subImgName = imgName.substring(0, dotPos);
+
+         var zoomURL = "http://themomgroup.scene7.com/s7viewers/html5/BasicZoomViewer.html?&config=Scene7SharedAssets/Universal_HTML5_Zoom_light&zoomfactor=3,-1,0&closeButton=1&asset=MomTex";
+         var zoomURLparms = "%3Fsrc%3Dir%7BMomTexRender%2F"
+            + document.getElementById("chairImgKey").value
+            + "-800%3Fresmode%3Dsharp2%26hei%3D800%26obj%3Dchair%26src%3D"
+            + subImgName
+            + "%26res%3D72%26sharpen%3D1%7D";
+         ;
+
+         var newURL = "/servlet/quickSearchRenderHTML5.jsp?newURL=" + escape(zoomURL) + "&zoomURLparms=" + zoomURLparms;
+         if (chairZoomed) {
+            zoomChairWindow.close();
+         }
+
+         // Fixes dual-screen position                         Most browsers      Firefox
+         var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;
+         var dualScreenTop = window.screenTop != undefined ? window.screenTop : screen.top;
+
+         cur_width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
+         cur_height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+
+         var w = 700;
+         var h = 700;
+         var left = ((cur_width / 2) - (w / 2)) + dualScreenLeft;
+         var top = ((cur_height / 2) - (h / 2)) + dualScreenTop;
+
+         zoomChairWindow = window.open(newURL, 'zoomChair', 'width=' + w + ',height=' + h + ',top=' + top + ',left=' + left + ',scrollbars=no,location=no,toolbar=no,status=no,menubar=no');
+         chairZoomed = true;
+      }
+
+
+      function zoomRoom() {
+
+         var imgName = document.getElementById("stdImgHidden").value;
+         var dotPos = imgName.indexOf(".");
+         var subImgName = imgName.substring(0, dotPos);
+
+         var roomURL = "http://themomgroup.scene7.com/s7viewers/html5/ZoomViewer.html?&serverUrl=http://themomgroup.scene7.com/is/image/&config=Scene7SharedAssets/Universal_HTML5_ImageSet_light&contenturl=http://themomgroup.scene7.com/skins/&closeButton=1&asset=MomTexRender"
+            + "/"
+            + curImageSetId;
+
+         var newURL = "/servlet/quickSearchRenderHTML5.jsp?newURL=" + escape(roomURL) + "&zoomURLparms=";
+         if (roomZoomed) {
+            zoomRoomWindow.close();
+         }
+
+         // Fixes dual-screen position                         Most browsers      Firefox
+         var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;
+         var dualScreenTop = window.screenTop != undefined ? window.screenTop : screen.top;
+
+         cur_width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
+         cur_height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+
+         var w = 700;
+         var h = 605;
+         var left = ((cur_width / 2) - (w / 2)) + dualScreenLeft;
+         var top = ((cur_height / 2) - (h / 2)) + dualScreenTop;
+
+         zoomRoomWindow = window.open(newURL, 'zoomChair', 'width=' + w + ',height=' + h + ',top=' + top + ',left=' + left + ',scrollbars=no,location=no,toolbar=no,status=no,menubar=no');
+         roomZoomed = true;
+      }
+
+
+      function zoomImage() {
+
+         if (document.getElementById("showChair").value == "Y") {
+            zoomChair();
+         } else if (document.getElementById("fabricZoomFlag").value == "Y") {
+            zoomFabric();
+         }
+      }
+
+      function showFabric() {
+
+         var curShowChairValue = document.getElementById("showChair").value;
+
+         if (curShowChairValue == "Y") {
+            toggleShowChair();
+         }
+
+      }
+
+      function toggleShowChair() {
+
+         var newShowChairValue;
+         var curShowChairValue = document.getElementById("showChair").value;
+
+         if (curShowChairValue == "Y") {
+            newShowChairValue = "N";
+         } else {
+            newShowChairValue = "Y";
+         }
+
+         var showList = false;
+         var renderList = document.getElementById("sysModList");
+
+         if (curShowChairValue == "N") {
+
+            var imgName = document.getElementById("stdImgHidden").value;
+            var dotPos = imgName.indexOf(".");
+            var subImgName = imgName.substring(0, dotPos);
+
+            var imgURL = "https://themomgroup.scene7.com/ir/render/MomTexRender/"
+               + document.getElementById("chairImgKey").value
+               + "-800?obj=chair&src="
+               + subImgName
+               + "&res=72&wid=375&hei=375&sharpen=1"
+               ;
+
+            var imgWidth = chairImgWidth;
+
+            document.getElementById("showChair").value = "Y";
+            showList = true;
+            var selectedVal = $("#sysModList :selected").val();
+            var htmlStr = "";
+            for (var i = 0; i < renderKeyArr.length; i++) {
+               htmlStr += "<option value='" + renderKeyArr[i] + "'>" + renderDescArr[i] + "</option>";
+            }
+            htmlStr += "<option value='switch' class='bottom_option'>view fabric</option>";
+            $("#sysModList").html(htmlStr);
+            $("#sysModList").val(selectedVal);
+            $("#zoomIcon").removeClass("noshow");
+            $("#zoomIconSpacer").removeClass("noshow");
+
+            $("select").selectmenu({
+               style: "dropdown"
+            });
+         } else {
+            var imgURL = "/images/fabrics/s" + document.getElementById("stdImgHidden").value;
+            var imgWidth = "375";
+            document.getElementById("showChair").value = "N";
+            htmlStr = "<option value='switch' default selected>chair</option>"
+            for (var i = 0; i < renderKeyArr.length; i++) {
+               htmlStr += "<option value='" + renderKeyArr[i] + "'>" + renderDescArr[i] + "</option>";
+            }
+            $("#sysModList").html(htmlStr);
+            if (document.getElementById("fabricZoomFlag").value != "Y") {
+               $("#zoomIcon").addClass("noshow");
+               $("#zoomIconSpacer").addClass("noshow");
+            }
+            $("select").selectmenu({
+               style: "dropdown"
+            });
+         }
+
+         document.getElementById("largePic").style.width = imgWidth;
+         document.getElementById("largePic").style.height = 375;
+         document.getElementById("largePic").src = imgURL;
+
+      }
+
+      function addToCart() {
+
+         document.body.style.cursor = 'wait';
+
+         var skuToAdd = document.getElementById("colorWaySku").value;
+
+         addToCartCall(0, skuToAdd);
+      }
+
+      function addToCartCall(count, skuToAdd) {
+         count++;
+         if (count > 1) {
+            displayError('Problem adding to cart');
+         } else {
+            QuickSearchCart.addToCart(skuToAdd, 1, 'sample', 'quickSearchSpecs.jsp', {
+               callback: function (data) { updateCartCount(data); },
+               errorHandler: function () { addToCartCall(count, skuToAdd); },
+               timeout: 20000
+            });
+         }
+      }
+
+      function viewCart() {
+         var href = '/servlet/quickSearchCart.jsp'
+            + '?backToPage=/servlet/quickSearchSpecs.jsp'
+            + '&prodNo=' + document.getElementById('colorWaySku').value
+            + '&patternPos=' + document.getElementById('itemToAdd').value
+            + '&colorPos=' + document.getElementById('colorPos').value
+            + '&searchType=' + document.getElementById('searchType').value
+            + '&navDirection=forward';
+
+         window.location = href;
+      }
+
+      function getInitialCartSize(count) {
+         count++;
+         if (count > 1) {
+            displayError('Problem getting cart contents');
+         } else {
+            QuickSearchCart.getCartSize({
+               callback: function (data) { updateInitialCartCount(data); },
+               errorHandler: function () { getInitialCartSize(count); },
+               timeout: 20000
+            });
+         }
+      }
+
+      function updateInitialCartCount(data) {
+
+         document.body.style.cursor = 'default';
+         if (data[0] == "success") {
+            var sizeOfCart = parseInt(data[1]);
+            document.getElementById("cart_link").innerHTML = "cart [" + sizeOfCart + "]";
+         } else if (data[0] == "error") {
+            displayError(data[2]);
+         } else if (data[0] == "timeout") {
+            window.location = "/servlet/qsError.jsp";
+         }
+      }
+
+      function getCartSize(count) {
+         count++;
+         if (count > 1) {
+            displayError('Problem getting cart contents');
+         } else {
+            QuickSearchCart.getCartSize({
+               callback: function (data) { updateCartCount(data); },
+               errorHandler: function () { getCartSize(count); },
+               timeout: 20000
+            });
+         }
+      }
+
+      function updateCartCount(data) {
+
+         document.body.style.cursor = 'default';
+         if (data[0] == "success") {
+            var sizeOfCart = parseInt(data[1]);
+            document.getElementById("cart_link").innerHTML = "cart [" + sizeOfCart + "]";
+
+            $("#cart_event").trigger("mouseenter");
+            setTimeout(function () {
+               $("#cart_event").trigger("mouseleave");
+            }, 1500);
+
+         } else if (data[0] == "error") {
+            displayError(data[2]);
+         } else if (data[0] == "timeout") {
+            window.location = "/servlet/qsError.jsp";
+         }
+      }
+
+      function addToFav() {
+
+         document.body.style.cursor = 'wait';
+
+         var skuToAdd = document.getElementById("colorWaySku").value;
+
+         addToFavCall(0, skuToAdd);
+      }
+
+      function addToFavCall(count, skuToAdd) {
+         count++;
+         if (count > 1) {
+            displayError('Problem adding to favorites');
+         } else {
+            QuickSearch.addToFavAjax(skuToAdd, {
+               callback: function (data) { addToFavCallback(data); },
+               errorHandler: function () { addToFavCall(count, skuToAdd); },
+               timeout: 20000
+            });
+         }
+      }
+
+      function addToFavCallback(data) {
+
+         document.body.style.cursor = 'default';
+         if (data[0] != "Y") {
+
+            $("#fav_event").trigger("mouseenter");
+            setTimeout(function () {
+               $("#fav_event").trigger("mouseleave");
+            }, 1500);
+
+         } else {
+            displayError(data[1]);
+         }
+
+      }
+
+      function viewFavorites() {
+         if (document.getElementById("loggedIn").value == "Y") {
+            var href = '/servlet/quickSearchFavorites.jsp'
+               + '?backToPage=/servlet/quickSearchSpecs.jsp'
+               + '&prodNo=' + document.getElementById('colorWaySku').value
+               + '&patternPos=' + document.getElementById('itemToAdd').value
+               + '&colorPos=' + document.getElementById('colorPos').value
+               + '&searchType=' + document.getElementById('searchType').value
+               + '&navDirection=forward';
+
+            window.location = href;
+         } else {
+            displayError("Please log in to access your favorites");
+         }
+      }
+
+      function loginSetup() {
+         var href = '/servlet/qsSetup1.jsp'
+            + '?backToPage=/servlet/quickSearchSpecs.jsp'
+            + '&prodNo=' + document.getElementById('colorWaySku').value
+            + '&patternPos=' + document.getElementById('itemToAdd').value
+            + '&colorPos=' + document.getElementById('colorPos').value
+            + '&searchType=' + document.getElementById('searchType').value
+            + '&navDirection=forward';
+
+         window.location = href;
+      }
+
+      function checkAvail() {
+
+         document.body.style.cursor = 'wait';
+
+         var skuToCheck = new Array(3);
+         skuToCheck[0] = document.getElementById("colorWaySku").value;
+         skuToCheck[1] = "";
+         skuToCheck[2] = "";
+
+         checkAvailCall(0, skuToCheck);
+      }
+
+      function checkAvailCall(count, skuToCheck) {
+
+         count++;
+         if (count > 1) {
+            displayError('Problem accessing server');
+         } else {
+            QuickSearch.returnPriceAvailAjax(skuToCheck, {
+               callback: function (data) { displayAvail(data); },
+               errorHandler: function () { checkAvailCall(count, skuToCheck); },
+               timeout: 20000
+            });
+         }
+
+      }
+
+      function displayAvail(data) {
+
+         if (data[0][3] == "timeout") {
+            window.location = "/servlet/qsError.jsp";
+         } else {
+            // JAH - Hide 0.0 available text for Wallcovering 07-02-19
+            var showAvail = true;
+            if (brand == "61" && data[0][3] == "0.0") {
+               showAvail = false;
+            }
+            document.body.style.cursor = 'default';
+            var fullProdName = unescape(document.getElementById("fullProdName").value);
+            var content = "<img id='popupThumbnail' src='/images/fabrics/c"
+               + document.getElementById('stdImgHidden').value
+               + "' />";
+            if (showAvail) {
+               content = content + "<div><span style='margin-bottom: 10px;'>"
+                  + "<strong>" + fullProdName + "</strong></span></div>"
+                  + "<div>" + data[0][3] + "&nbsp;&nbsp;yards in stock (US).</div>";
+            }
+            if (data[0][3] == "0.0") {
+               content = content + "<div>For availability contact Customer Service: 800-366-6839</div>";
+            }
+            displayError(content);
+         }
+      }
+
+      function sendEmail() {
+
+         var subURL = "http://" + window.location.host;
+         var prodNo = document.getElementById("colorWaySku").value;
+         var currentURL = subURL + "/servlet/QuickSearch?" + escape("choice=3&brand=81&prodNo=" + prodNo);
+         var subject = "Momentum Textiles Ace Memo Tag";
+         var keyWords = "the Momentum Textiles Ace memo tag";
+         if (document.getElementById("showChair").value == "Y") {
+            currentURL = currentURL + escape("&chairImgKey=" + document.getElementById("chairImgKey").value);
+
+
+            subject = escape("Momentum Textiles Ace Fabric on Chair");
+            keyWords = "";
+            var i = document.getElementById("sysModList").selectedIndex;
+            var chairName = document.getElementById("sysModList").options[i].text;
+            //keyWords = keyWords + chairName + " chair upholstered in momtex Ace";	
+            keyWords = "a " + keyWords + "chair upholstered in Momentum Textiles Ace";
+
+         }
+         var body = "Here is the link to " + keyWords + ":%0A%0A" + currentURL;
+         var url = "mailto:?subject=" + subject + "&body=" + body;
+         window.location = url;
+      }
+
+      function viewPreApprovals() {
+         var url = "/servlet/qsShowApprovalInfo.jsp"
+            + "?prodNo=" + document.getElementById("colorWaySku").value
+            + "&prodDesc=" + escape(document.getElementById("fullProdName").value)
+            + "&type=6";
+         window.open(url, 'preapproval', 'width=700,height=500,top=0,left=0,scrollbars=yes');
+      }
+
+      function downloadImage() {
+
+         var URL = '/images/hires/' + curImgName;
+
+         window.location = URL;
+
+      }
+
+      function downloadPDF(pdfName) {
+
+         var URL = '/pdf/' + pdfName;
+
+         window.location = URL;
+
+      }
+
+      function downloadCleaningGuide() {
+
+         var URL = '/servlet/CleaningGuide?productNo=' + curProdNo;
+
+         window.location = URL;
+
+      }
+
+   </script>
+
+</head>
+
+<body style="cursor: default;">
+   <form action="https://www.memosamples.com/servlet/QuickSearch" name="searchSpecs" method="post">
+      <div id="container">
+
+         <div id="header_dynamic">
+            <a href="https://www.memosamples.com/momentum_textiles.shtml"><img class="header_brand"
+                  src="./Product Specifications_files/momtex_logo.gif" alt="Momentum Textiles" title=""></a> <img
+               class="header_title" src="./Product Specifications_files/prod_detail.gif" width="375" height="65"
+               alt="Product Detail" title="">
+
+            <!-- <script type="text/javascript" src="/js/jquery-1.4.3.min.js"></script> -->
+            <script type="text/javascript" src="./Product Specifications_files/cookies.js.download"></script>
+
+            <link rel="stylesheet" href="./Product Specifications_files/jquery.popup.login.css" type="text/css"
+               media="all">
+
+            <script type="text/javascript" src="./Product Specifications_files/QuickSearchCart.js.download"> </script>
+            <script type="text/javascript" src="./Product Specifications_files/QuickSearchLogin.js.download"> </script>
+            <script type="text/javascript" src="./Product Specifications_files/engine.js.download"> </script>
+
+            <script type="text/javascript">
+
+               $(document).ready(function () {
+
+                  setFormValues();
+                  getContactName(0);
+
+                  $("#passwd_interactive").bind("keypress", function (e) {
+                     var code = (e.keyCode ? e.keyCode : e.which);
+                     if (code == 13) {
+                        loginAttempt();
+                     }
+                  });
+
+                  $("#userID_interactive").bind("keypress", function (e) {
+                     var code = (e.keyCode ? e.keyCode : e.which);
+                     if (code == 13) {
+                        $("#passwd_interactive").focus();
+                     }
+                  });
+
+                  $("#email_interactive").bind("keypress", function (e) {
+                     var code = (e.keyCode ? e.keyCode : e.which);
+                     if (code == 13) {
+                        loginReminder();
+                     }
+                  });
+
+                  //CLOSING POPUPS
+                  //Click the x event!
+                  $("#popupContactCloseLogin").click(function () {
+                     disableSpecificPopup("Login");
+                  });
+                  //Click out event!
+                  $("#backgroundPopupLogin").click(function () {
+                     disableSpecificPopup("Login");
+                  });
+                  //Click the x event!
+                  $("#popupContactCloseReminder").click(function () {
+                     disableSpecificPopup("Reminder");
+                  });
+                  //Click out event!
+                  $("#backgroundPopupReminder").click(function () {
+                     disableSpecificPopup("Reminder");
+                  });
+               });
+
+               //SETTING UP OUR POPUP  
+               //0 means disabled; 1 means enabled;  
+               var popupLoginStatus = 0;
+               var popupReminderStatus = 0;
+
+               //loading popup with jQuery magic!
+               function loadSpecificPopup(name) {
+                  //loads popup only if it is disabled
+                  var thisPopupStatus;
+                  if (name == "Login") {
+                     thisPopupStatus = popupLoginStatus;
+                  } else if (name == "Reminder") {
+                     thisPopupStatus = popupReminderStatus;
+                  }
+
+                  if (thisPopupStatus == 0) {
+                     $("#backgroundPopup" + name).css({
+                        "opacity": "0.6"
+                     });
+                     $("#backgroundPopup" + name).fadeIn("slow");
+                     $("#popupContact" + name).fadeIn("slow");
+                     if (name == "Login") {
+                        popupLoginStatus = 1;
+                     } else if (name == "Reminder") {
+                        popupReminderStatus = 1;
+                     }
+                  }
+               }
+
+
+               //disabling popup with jQuery magic!
+               function disableSpecificPopup(name) {
+                  //disables popup only if it is enabled
+                  var thisPopupStatus;
+                  if (name == "Login") {
+                     thisPopupStatus = popupLoginStatus;
+                  } else if (name == "Reminder") {
+                     thisPopupStatus = popupReminderStatus;
+                  }
+
+                  if (thisPopupStatus == 1) {
+                     $("#backgroundPopup" + name).fadeOut("slow");
+                     $("#popupContact" + name).fadeOut("slow");
+                     if (name == "Login") {
+                        popupLoginStatus = 0;
+                     } else if (name == "Reminder") {
+                        popupReminderStatus = 0;
+                     }
+                  }
+               }
+
+               //centering popup
+               function centerSpecificPopup(name) {
+                  //request data for centering
+                  var windowWidth = document.documentElement.clientWidth;
+                  var windowHeight = document.documentElement.clientHeight;
+                  var popupHeight = $("#popupContact" + name).height();
+                  var popupWidth = $("#popupContact" + name).width();
+                  //centering
+                  $("#popupContact" + name).css({
+                     "position": "absolute",
+                     "top": windowHeight / 2 - popupHeight / 2 - 20,
+                     "left": windowWidth / 2 - popupWidth / 2 - 20
+                  });
+                  //only need force for IE6
+
+                  $("#backgroundPopup" + name).css({
+                     "height": windowHeight
+                  });
+
+               }
+
+               function displaySpecificPopup(name) {
+
+                  centerSpecificPopup(name);
+                  loadSpecificPopup(name);
+               }
+
+               function getContactName(count) {
+                  count++;
+                  if (count > 1) {
+                     // just give up after 4 tries	
+                  } else {
+                     QuickSearchLogin.getContactNameAjax({
+                        callback: function (data) { updateContactName(data); },
+                        errorHandler: function () { getContactName(count); },
+                        timeout: 20000
+                     });
+                  }
+               }
+
+               function updateContactName(data) {
+
+                  if (data[0] == "success") {
+                     document.getElementById("welcome").innerHTML = "Welcome&nbsp;";
+                     document.getElementById("contact_name").innerHTML = data[1];
+                     document.getElementById("contactNamePopup").innerHTML = "Not <strong>" + data[5] + "</strong>?<br />";
+                     document.getElementById("userID_interactive").value = data[2];
+                     document.getElementById("passwd_interactive").value = data[3];
+                     document.getElementById("loggedIn").value = "Y";
+                  } else {
+                     document.getElementById("welcome").innerHTML = "";
+                     document.getElementById("contact_name").innerHTML = "login";
+                     document.getElementById("contactNamePopup").innerHTML = "";
+                     document.getElementById("userID_interactive").value = "";
+                     document.getElementById("passwd_interactive").value = "";
+                     document.getElementById("loggedIn").value = "N";
+                  }
+               }
+
+               function emptyField(textObj) {
+                  if (textObj.value.length == 0) return true;
+                  for (var i = 0; i < textObj.value.length; ++i) {
+                     var ch = textObj.value.charAt(i);
+                     if (ch != ' ' && ch != '\t') return false;
+                  }
+                  return true;
+               }
+
+               function submitForm() {
+                  if (validate())
+                     document.forms[0].submit();
+               }
+
+               function setFormValues() {
+                  var userID = readCookie("userID");
+                  var passwd = readCookie("passwd");
+
+                  if (userID != null && passwd != null) {
+                     document.getElementById("userID_interactive").value = userID;
+                     document.getElementById("passwd_interactive").value = passwd;
+                     document.getElementById("persistentLoginCheck").checked = true;
+                     createCookie("userID", userID, 365);
+                     createCookie("passwd", passwd, 365);
+                  }
+               }
+
+               function persistentLogin() {
+                  var userID = document.getElementById("userID_interactive").value;
+                  var passwd = document.getElementById("passwd_interactive").value;
+
+                  if (document.getElementById("persistentLoginCheck").checked) {
+                     createCookie("userID", userID, 365);
+                     createCookie("passwd", passwd, 365);
+                  } else {
+                     eraseCookie("userID");
+                     eraseCookie("passwd");
+                  }
+               }
+
+               function showReminder() {
+
+                  document.getElementById("password_reminder").className = "show";
+
+               }
+
+               function emailValidate() {
+
+                  if (document.getElementById("email_interactive").value.length == 0) {
+                     displayError("You must enter your email address.");
+                     return false;
+                  } else {
+                     return true;
+                  }
+
+               }
+
+               function loginNameFocus() {
+
+                  var userID_El = document.getElementById("userID_interactive");
+                  if (userID_El.value.length == 0) {
+                     userID_El.focus();
+                  }
+               }
+
+               function loginValidate() {
+
+                  if ((emptyField(document.getElementById("userID_interactive")) || emptyField(document.getElementById("passwd_interactive")))
+                     && emptyField(document.getElementById("email_interactive"))) {
+                     displayError("You must enter a user ID and password.");
+                     return false;
+                  }
+
+                  persistentLogin();
+                  return true;
+               }
+
+               function loginAttempt() {
+
+                  disableSpecificPopup("Login");
+
+                  var name = document.getElementById("userID_interactive").value;
+                  var passwd = document.getElementById("passwd_interactive").value;
+
+                  if (loginValidate) {
+                     document.body.style.cursor = 'wait';
+                     loginAttemptCall(0, name, passwd, "initial");
+                  } else {
+                     document.getElementById("lastDialogue").value = "Login";
+                  }
+               }
+
+               function loginAttemptCall(count, name, passwd, phase) {
+
+                  count++;
+                  if (count > 1) {
+                     document.body.style.cursor = 'default';
+                     displayError("There was a problem contacting the server.&nbsp;&nbsp;Please try again.");
+                  } else {
+                     var dynamic = true;
+                     QuickSearchLogin.loginAjax(name, passwd, phase, dynamic, {
+                        callback: function (data) { loginAttemptCallback(data); },
+                        errorHandler: function () { loginAttemptCall(count, name, passwd, phase); },
+                        //errorHandler:function(errorString, exception) { alert("error: " + errorString + ", exception: " + exception); },
+                        timeout: 20000
+                     });
+                  }
+
+               }
+
+               function loginAttemptCallback(data) {
+
+                  document.body.style.cursor = 'default';
+                  var errorParam = "false";
+
+                  if (data[0] == "success" || data[0] == "soft_error" || data[0] == "fatal_cart_error") {
+                     if (data[0] != "success") {
+                        displayError(data[1]);
+                     }
+                     persistentLogin();
+                     getContactName(0);
+                     document.getElementById("loggedIn").value = "Y";
+                     var currentURL = $(location).attr('href');
+                     var currentPage;
+                     var paramIndex = currentURL.indexOf("?");
+                     if (paramIndex == -1) {
+                        currentPage = currentURL.substring(currentURL.lastIndexOf('/') + 1);
+                     } else {
+                        var lastPageIndex = 0;
+                        for (var i = 0; i < paramIndex; i++) {
+                           if (currentURL.charAt(i) == "/") {
+                              lastPageIndex = i;
+                           }
+                        }
+                        currentPage = currentURL.substring(lastPageIndex + 1);
+                     }
+                     if (currentPage.indexOf("quickSearchFavorites.jsp") == 0) {
+                        getFavContentsCall(0, 1);
+                     }
+                  } else if (data[0] == "fatal_error") {
+                     displayError(data[1]);
+                     document.getElementById("lastDialogue").value = "Login";
+                  } else if (data[0] == "timeout") {
+                     //displayError ("There was a problem contacting the server.&nbsp;&nbsp;Please try again.");
+                     //document.getElementById("lastDialogue").value = "Login";
+                     window.location = "/servlet/qsError.jsp";
+                  }
+               }
+
+               function loginReminder() {
+
+                  disableSpecificPopup("Reminder");
+
+                  var email = document.getElementById("email_interactive").value;
+
+                  if (emailValidate()) {
+                     document.body.style.cursor = 'wait';
+                     loginReminderCall(0, email);
+                  } else {
+                     document.getElementById("lastDialogue").value = "Reminder";
+                  }
+               }
+
+               function loginReminderCall(count, email) {
+
+                  count++;
+                  if (count > 1) {
+                     document.body.style.cursor = 'default';
+                     displayError("There was a problem contacting the server.&nbsp;&nbsp;Please try again.");
+                  } else {
+                     QuickSearchLogin.sendLoginReminderAjax(email, {
+                        callback: function (data) { loginReminderCallback(data); },
+                        errorHandler: function () { loginReminderCall(count, email); },
+                        //errorHandler:function(errorString, exception) { alert("error: " + errorString + ", exception: " + exception); },
+                        timeout: 20000
+                     });
+                  }
+
+               }
+
+               function loginReminderCallback(data) {
+
+                  document.body.style.cursor = 'default';
+
+                  if (data[0] == "success" || data[0] == "error") {
+                     displayError(data[1]);
+                     if (data[0] == "success") {
+                        document.getElementById("lastDialogue").value = "Login";
+                     } else {
+                        document.getElementById("lastDialogue").value = "Reminder";
+                     }
+                  } else if (data[0] == "timeout") {
+                     //displayError ("There was a problem contacting the server.&nbsp;&nbsp;Please try again.");
+                     //document.getElementById("lastDialogue").value = "Reminder";
+                     window.location = "/servlet/qsError.jsp";
+                  }
+               }
+
+               function showReminder() {
+
+                  disableSpecificPopup("Login");
+                  displaySpecificPopup("Reminder");
+               }
+
+               function logout() {
+
+                  document.getElementById("persistentLoginCheck").checked = false;
+                  persistentLogin();
+                  logoutAttemptCall(0);
+               }
+
+               function logoutAttemptCall(count) {
+
+                  count++;
+                  if (count > 1) {
+                     document.body.style.cursor = 'default';
+                     displayError("There was a problem contacting the server.&nbsp;&nbsp;Please try again.");
+                  } else {
+                     QuickSearchLogin.logoutAjax({
+                        callback: function (data) { logoutAttemptCallback(data); },
+                        errorHandler: function () { logoutAttemptCall(count); },
+                        //errorHandler:function(errorString, exception) { alert("error: " + errorString + ", exception: " + exception); },
+                        timeout: 20000
+                     });
+                  }
+
+               }
+
+               function logoutAttemptCallback(data) {
+
+                  if (data) {
+                     window.location = "/index.shtml";
+                  } else {
+                     displayError("There was a problem contacting the server.&nbsp;&nbsp;Please try again.");
+                  }
+               }
+
+               /**
+               function loginSetup() {
+                  var currentURL = $(location).attr('href');
+                  var currentPage =  currentURL.substring(currentURL.lastIndexOf('/') + 1);
+                  var href = '/servlet/qsSetup1.jsp'
+                     + '?backToPage=/servlet/' + currentPage;
+                  window.location = href;
+               }
+               **/
+            </script>
+
+
+            <link rel="stylesheet" href="./Product Specifications_files/jquery.popup.css" type="text/css" media="all">
+            <script type="text/javascript">
+
+               $(document).ready(function () {
+
+                  //CLOSING POPUP
+                  //Click the x event!
+                  $("#popupContactClose").click(function () {
+                     disablePopup();
+                  });
+                  //Click out event!
+                  $("#backgroundPopup").click(function () {
+                     disablePopup();
+                  });
+               });
+
+               //SETTING UP OUR POPUP  
+               //0 means disabled; 1 means enabled;  
+               var popupStatus = 0;
+
+
+               //loading popup with jQuery magic!
+               function loadPopup() {
+                  //loads popup only if it is disabled
+                  if (popupStatus == 0) {
+                     $("#backgroundPopup").css({
+                        "opacity": "0.6"
+                     });
+                     $("#backgroundPopup").fadeIn("slow");
+                     $("#popupContact").fadeIn("slow");
+                     popupStatus = 1;
+                  }
+               }
+
+
+               //disabling popup with jQuery magic!
+               function disablePopup() {
+                  //disables popup only if it is enabled
+                  if (popupStatus == 1) {
+                     $("#backgroundPopup").fadeOut("slow");
+                     $("#popupContact").fadeOut("slow");
+                     popupStatus = 0;
+                  }
+
+                  //see if another popup needs to be loaded now
+                  var lastDialogue = document.getElementById("lastDialogue").value;
+                  if (lastDialogue.length > 0) {
+                     document.getElementById("lastDialogue").value = "";
+                     loadSpecificPopup(lastDialogue);
+                  }
+               }
+
+               //centering popup
+               function centerPopup() {
+                  //request data for centering
+                  var windowWidth = document.documentElement.clientWidth;
+                  var windowHeight = document.documentElement.clientHeight;
+                  var popupHeight = $("#popupContact").height();
+                  var popupWidth = $("#popupContact").width();
+                  //centering
+                  $("#popupContact").css({
+                     "position": "absolute",
+                     "top": windowHeight / 2 - popupHeight / 2 - 20,
+                     "left": windowWidth / 2 - popupWidth / 2 - 20
+                  });
+                  //only need force for IE6
+
+                  $("#backgroundPopup").css({
+                     "height": windowHeight
+                  });
+
+               }
+
+               function displayError(errorText) {
+
+                  document.getElementById("contactArea").innerHTML = errorText;
+                  var width = document.getElementById("contactArea").width;
+                  if (width > 360) {
+                     //document.getElementById("contactArea").width = 360;
+                     $("#contactArea").width(360);
+                  }
+                  centerPopup();
+                  loadPopup();
+               }
+
+            </script>
+
+            <div id="popupContact" style="position: absolute; top: 419px; left: 745px; display: none;">
+               <a id="popupContactClose"></a>
+               <div class="popup_divider"></div>
+               <div id="contactArea"><img id="popupThumbnail" src="./Product Specifications_files/cace-hot.jpg">
+                  <div><span style="margin-bottom: 10px;"><strong>Ace - Hot</strong></span></div>
+                  <div>83.1&nbsp;&nbsp;yards in stock (US).</div>
+               </div>
+            </div>
+            <div id="backgroundPopup" style="height: 969px; opacity: 0.6; display: none;"></div>
+
+            <input type="hidden" id="lastDialogue" size="-1" value="">
+            <input type="hidden" id="loggedIn" size="-1" value="N">
+
+            <div id="popupContactLogin">
+               <a id="popupContactCloseLogin"></a>
+               <div class="popup_divider"></div>
+               <div id="contactAreaLogin">
+                  <span id="contactNamePopup"></span>
+                  Enter your login information below.<br><br>
+                  <p>User ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     <label>
+                        <input type="text" class="login_field" id="userID_interactive" size="23">
+                     </label>
+                     <br><br>
+                     Password&nbsp;&nbsp;
+                     <label>
+                        <input type="password" class="login_field" id="passwd_interactive" size="23">
+                     </label>
+                     <br><br>
+                     <label>
+                        <input type="checkbox" id="persistentLoginCheck" onclick="persistentLogin();">
+                     </label>
+                     Remember my login on this computer<br><br>
+                     <span id="content_orange_links"><a style="padding-right:5px;"
+                           href="https://www.memosamples.com/servlet/quickSearchSpecs.jsp?prodNo=09104445&amp;patternPos=2&amp;colorPos=7&amp;chairImgKey=&amp;backToPage=/servlet/quickSearch.jsp&amp;favorites=&amp;navDirection=detail&amp;searchType=library#"
+                           onclick="loginAttempt();">login [&gt;]</a>
+                     </span>
+                     <span id="content_orange_links"><a style="padding-right:5px;"
+                           href="https://www.memosamples.com/servlet/quickSearchSpecs.jsp?prodNo=09104445&amp;patternPos=2&amp;colorPos=7&amp;chairImgKey=&amp;backToPage=/servlet/quickSearch.jsp&amp;favorites=&amp;navDirection=detail&amp;searchType=library#"
+                           onclick="loginSetup();">I'm new [&gt;]</a>
+                     </span>
+                     <span id="content_orange_links"><a style="padding-left:5px;"
+                           href="https://www.memosamples.com/servlet/quickSearchSpecs.jsp?prodNo=09104445&amp;patternPos=2&amp;colorPos=7&amp;chairImgKey=&amp;backToPage=/servlet/quickSearch.jsp&amp;favorites=&amp;navDirection=detail&amp;searchType=library#"
+                           onclick="showReminder();">I forgot [&gt;]</a>
+                     </span>
+                     <span id="content_orange_links"><a style="padding-left:5px;"
+                           href="https://www.memosamples.com/servlet/quickSearchSpecs.jsp?prodNo=09104445&amp;patternPos=2&amp;colorPos=7&amp;chairImgKey=&amp;backToPage=/servlet/quickSearch.jsp&amp;favorites=&amp;navDirection=detail&amp;searchType=library#"
+                           onclick="logout();">logout [&gt;]</a>
+                     </span>
+                  </p>
+               </div>
+            </div>
+            <div id="backgroundPopupLogin"></div>
+
+            <div id="popupContactReminder">
+               <a id="popupContactCloseReminder"></a>
+               <div class="popup_divider"></div>
+               <div id="contactAreaReminder">
+                  <strong>Forgotten User ID or Password?</strong><br><br>
+                  <p>Enter your email address and we'll send it to you.</p>
+                  <label>
+                     <input id="email_interactive" type="text" class="login_field" size="40">
+                  </label>
+                  <br><br>
+                  <span id="content_orange_links">
+                     <a href="https://www.memosamples.com/servlet/quickSearchSpecs.jsp?prodNo=09104445&amp;patternPos=2&amp;colorPos=7&amp;chairImgKey=&amp;backToPage=/servlet/quickSearch.jsp&amp;favorites=&amp;navDirection=detail&amp;searchType=library#"
+                        onclick="loginReminder();">submit [&gt;]</a>
+                  </span>
+               </div>
+            </div>
+            <div id="backgroundPopupReminder"></div>
+
+            <div id="cart_container" style="float: right;">
+               <p class="spec_data"><span id="welcome"></span>
+                  <span class="content_orange_links">
+                     <a id="contact_name" style="padding-right:9px; border-right:1px solid #CCC;"
+                        href="https://www.memosamples.com/servlet/quickSearchSpecs.jsp?prodNo=09104445&amp;patternPos=2&amp;colorPos=7&amp;chairImgKey=&amp;backToPage=/servlet/quickSearch.jsp&amp;favorites=&amp;navDirection=detail&amp;searchType=library#"
+                        onclick="displaySpecificPopup(&#39;Login&#39;); loginNameFocus();">login</a>
+                  </span>
+                  <span id="favorites_link" class="content_orange_links">
+                     <img id="fav_event" src="./Product Specifications_files/blank.gif" width="0" height="0" alt=""
+                        title="">
+                     <a style="padding-right:7px; padding-left:7px; border-right:1px solid #CCC;"
+                        href="https://www.memosamples.com/servlet/quickSearchSpecs.jsp?prodNo=09104445&amp;patternPos=2&amp;colorPos=7&amp;chairImgKey=&amp;backToPage=/servlet/quickSearch.jsp&amp;favorites=&amp;navDirection=detail&amp;searchType=library#"
+                        onclick="viewFavorites();">favorites
+                     </a>
+                  </span>
+                  <span class="content_orange_links">
+                     <a id="cart_link" style="padding-left:8px;"
+                        href="https://www.memosamples.com/servlet/quickSearchSpecs.jsp?prodNo=09104445&amp;patternPos=2&amp;colorPos=7&amp;chairImgKey=&amp;backToPage=/servlet/quickSearch.jsp&amp;favorites=&amp;navDirection=detail&amp;searchType=library#"
+                        onclick="viewCart();">cart [0]</a>
+                     <img id="cart_event" src="./Product Specifications_files/blank.gif" width="0" height="0" alt=""
+                        title="">
+                  </span>
+               </p>
+            </div>
+
+
+
+         </div>
+
+         <div id="yarnball_static">
+            <a href="https://www.memosamples.com/index.shtml"><img
+                  src="./Product Specifications_files/yarnball_logo.gif" width="34" height="30" border="0" alt="home"
+                  title=""></a>
+         </div>
+
+         <div id="content_container_static">
+
+            <div class="thumbs_wrapper">
+
+               <div id="product_name_color">Ace
+                  -
+                  Hot</div>
+               <div id="product_alt_name" class="noshow"></div>
+               <!--  BEGINNING OF SCROLLBAR ORANGE CIRCLE  -->
+               <div id="scrollbar_thumbs">
+                  <div class="scrollbar" style="height: 205px;">
+                     <div class="track" style="height: 205px;">
+                        <div class="thumb" style="top: 0px; height: 15px;">
+                           <div class="end"></div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="viewport">
+                     <div class="overview" style="top: 0px;">
+                        <div id="thumbnails">
+
+                           <img class="individual_thumbs" src="./Product Specifications_files/cace-bisque.jpg"
+                              width="65" height="65" alt="Ace Bisque" onclick="swapPicture(&#39;ace-bisque.jpg&#39;,
+												 &#39;Bisque&#39;,
+												 &#39;09104368&#39;,
+												 &#39;0&#39;,
+												 &#39;&#39;,
+												 &#39;&#39;);" title="">
+
+                           <img class="individual_thumbs" src="./Product Specifications_files/cace-cadet.jpg" width="65"
+                              height="65" alt="Ace Cadet" onclick="swapPicture(&#39;ace-cadet.jpg&#39;,
+												 &#39;Cadet&#39;,
+												 &#39;09104379&#39;,
+												 &#39;1&#39;,
+												 &#39;&#39;,
+												 &#39;&#39;);" title="">
+
+                           <img class="individual_thumbs" src="./Product Specifications_files/cace-calico.jpg"
+                              width="65" height="65" alt="Ace Calico" onclick="swapPicture(&#39;ace-calico.jpg&#39;,
+												 &#39;Calico&#39;,
+												 &#39;09104390&#39;,
+												 &#39;2&#39;,
+												 &#39;&#39;,
+												 &#39;&#39;);" title="">
+
+                           <img class="individual_thumbs" src="./Product Specifications_files/cace-carbon.jpg"
+                              width="65" height="65" alt="Ace Carbon" onclick="swapPicture(&#39;ace-carbon.jpg&#39;,
+												 &#39;Carbon&#39;,
+												 &#39;09104401&#39;,
+												 &#39;3&#39;,
+												 &#39;&#39;,
+												 &#39;&#39;);" title="">
+
+                           <img class="individual_thumbs" src="./Product Specifications_files/cace-dark.jpg" width="65"
+                              height="65" alt="Ace Dark" onclick="swapPicture(&#39;ace-dark.jpg&#39;,
+												 &#39;Dark&#39;,
+												 &#39;09104412&#39;,
+												 &#39;4&#39;,
+												 &#39;&#39;,
+												 &#39;&#39;);" title="">
+
+                           <img class="individual_thumbs" src="./Product Specifications_files/cace-dream.jpg" width="65"
+                              height="65" alt="Ace Dream" onclick="swapPicture(&#39;ace-dream.jpg&#39;,
+												 &#39;Dream&#39;,
+												 &#39;09104423&#39;,
+												 &#39;5&#39;,
+												 &#39;&#39;,
+												 &#39;&#39;);" title="">
+
+                           <img class="individual_thumbs" src="./Product Specifications_files/cace-engine.jpg"
+                              width="65" height="65" alt="Ace Engine" onclick="swapPicture(&#39;ace-engine.jpg&#39;,
+												 &#39;Engine&#39;,
+												 &#39;09104434&#39;,
+												 &#39;6&#39;,
+												 &#39;&#39;,
+												 &#39;&#39;);" title="">
+
+                           <img class="individual_thumbs" src="./Product Specifications_files/cace-hot.jpg" width="65"
+                              height="65" alt="Ace Hot" onclick="swapPicture(&#39;ace-hot.jpg&#39;,
+												 &#39;Hot&#39;,
+												 &#39;09104445&#39;,
+												 &#39;7&#39;,
+												 &#39;&#39;,
+												 &#39;&#39;);" title="">
+
+                           <img class="individual_thumbs" src="./Product Specifications_files/cace-pesto.jpg" width="65"
+                              height="65" alt="Ace Pesto" onclick="swapPicture(&#39;ace-pesto.jpg&#39;,
+												 &#39;Pesto&#39;,
+												 &#39;09104456&#39;,
+												 &#39;8&#39;,
+												 &#39;&#39;,
+												 &#39;&#39;);" title="">
+
+                           <img class="individual_thumbs" src="./Product Specifications_files/cace-regal.jpg" width="65"
+                              height="65" alt="Ace Regal" onclick="swapPicture(&#39;ace-regal.jpg&#39;,
+												 &#39;Regal&#39;,
+												 &#39;09104467&#39;,
+												 &#39;9&#39;,
+												 &#39;&#39;,
+												 &#39;&#39;);" title="">
+
+                           <img class="individual_thumbs" src="./Product Specifications_files/cace-scarlet.jpg"
+                              width="65" height="65" alt="Ace Scarlet" onclick="swapPicture(&#39;ace-scarlet.jpg&#39;,
+												 &#39;Scarlet&#39;,
+												 &#39;09104478&#39;,
+												 &#39;10&#39;,
+												 &#39;&#39;,
+												 &#39;&#39;);" title="">
+
+                           <img class="individual_thumbs" src="./Product Specifications_files/cace-trail.jpg" width="65"
+                              height="65" alt="Ace Trail" onclick="swapPicture(&#39;ace-trail.jpg&#39;,
+												 &#39;Trail&#39;,
+												 &#39;09104489&#39;,
+												 &#39;11&#39;,
+												 &#39;&#39;,
+												 &#39;&#39;);" title="">
+
+                           <img class="individual_thumbs" src="./Product Specifications_files/cace-tuxedo.jpg"
+                              width="65" height="65" alt="Ace Tuxedo" onclick="swapPicture(&#39;ace-tuxedo.jpg&#39;,
+												 &#39;Tuxedo&#39;,
+												 &#39;09104500&#39;,
+												 &#39;12&#39;,
+												 &#39;&#39;,
+												 &#39;&#39;);" title="">
+
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="spec_wrapper">
+                  <table class="spec_data spec_data_top">
+                     <tbody>
+                        <tr>
+                           <td><strong>Repeat</strong> (full repeat shown)<br> <br></td>
+                           <td class="show"><strong>Net
+                                 Price
+                              </strong><br> $23.50/YD</td>
+                        </tr>
+                        <tr>
+                           <td colspan="2"><strong>Content</strong><br> 100% Post Consumer Recycled Polyester</td>
+                        </tr>
+                        <tr>
+                           <td colspan="2" class="spec_data_rei">
+                              <strong>Reduced Environmental Impact</strong><br>Recycled Fiber Content;&nbsp;GREENGUARD
+                              Gold Certified;&nbsp;NSF 336 Compliant
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <table class="spec_data spec_data_bottom">
+                  <tbody>
+                     <tr>
+                        <td colspan="2" align="right">
+                           <div style="float: left;">
+
+                              <a href="https://www.memosamples.com/servlet/quickSearchSpecs.jsp?prodNo=09104445&amp;patternPos=2&amp;colorPos=7&amp;chairImgKey=&amp;backToPage=/servlet/quickSearch.jsp&amp;favorites=&amp;navDirection=detail&amp;searchType=library#"
+                                 onclick="window.open(&#39;http://www.contracttextiles.org/index.php?page=flammability&#39;,&#39;new_win&#39;,&#39;width=1000,height=500,scrollbars=yes&#39;); return false;"><img
+                                    src="./Product Specifications_files/actfire.gif" alt="" title=""></a>
+                              <a href="https://www.memosamples.com/servlet/quickSearchSpecs.jsp?prodNo=09104445&amp;patternPos=2&amp;colorPos=7&amp;chairImgKey=&amp;backToPage=/servlet/quickSearch.jsp&amp;favorites=&amp;navDirection=detail&amp;searchType=library#"
+                                 onclick="window.open(&#39;http://www.contracttextiles.org/index.php?page=abrasion&#39;,&#39;new_win&#39;,&#39;width=1000,height=500,scrollbars=yes&#39;); return false;"><img
+                                    src="./Product Specifications_files/actlgabrasion.gif" alt="" title=""></a>
+                              <a href="https://www.memosamples.com/servlet/quickSearchSpecs.jsp?prodNo=09104445&amp;patternPos=2&amp;colorPos=7&amp;chairImgKey=&amp;backToPage=/servlet/quickSearch.jsp&amp;favorites=&amp;navDirection=detail&amp;searchType=library#"
+                                 onclick="window.open(&#39;http://www.contracttextiles.org/index.php?page=colorfastness-to-light&#39;,&#39;new_win&#39;,&#39;width=1000,height=500,scrollbars=yes&#39;); return false;"><img
+                                    src="./Product Specifications_files/actsun.gif" alt="" title=""></a>
+                              <a href="https://www.memosamples.com/servlet/quickSearchSpecs.jsp?prodNo=09104445&amp;patternPos=2&amp;colorPos=7&amp;chairImgKey=&amp;backToPage=/servlet/quickSearch.jsp&amp;favorites=&amp;navDirection=detail&amp;searchType=library#"
+                                 onclick="window.open(&#39;http://www.contracttextiles.org/index.php?page=wet-dry-crocking&#39;,&#39;new_win&#39;,&#39;width=1000,height=500,scrollbars=yes&#39;); return false;"><img
+                                    src="./Product Specifications_files/actcolorpalette.gif" alt="" title=""></a>
+                              <a href="https://www.memosamples.com/servlet/quickSearchSpecs.jsp?prodNo=09104445&amp;patternPos=2&amp;colorPos=7&amp;chairImgKey=&amp;backToPage=/servlet/quickSearch.jsp&amp;favorites=&amp;navDirection=detail&amp;searchType=library#"
+                                 onclick="window.open(&#39;http://www.contracttextiles.org/index.php?page=physical-properties&#39;,&#39;new_win&#39;,&#39;width=1000,height=500,scrollbars=yes&#39;); return false;"><img
+                                    src="./Product Specifications_files/actstar.gif" alt="" title=""></a>
+
+                           </div>
+                           <div class="bottom_right_link">
+
+                              <a href="https://www.memosamples.com/servlet/quickSearchSpecs.jsp?prodNo=09104445&amp;patternPos=2&amp;colorPos=7&amp;chairImgKey=&amp;backToPage=/servlet/quickSearch.jsp&amp;favorites=&amp;navDirection=detail&amp;searchType=library#"
+                                 onclick="viewDetails(&#39;N&#39;);">complete specs
+                                 [&gt;]</a>
+
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+
+            </div>
+            <!-- end of thumbs_wrapper -->
+
+
+            <div id="image_container">
+
+
+               <img id="largePic" onclick="zoomImage();" src="./Product Specifications_files/sace-hot.jpg" alt="Ace Hot"
+                  title="">
+
+               <div id="backarrow_container" class="icons">
+                  <a id="backarrow"
+                     href="https://www.memosamples.com/servlet/quickSearchSpecs.jsp?prodNo=09104445&amp;patternPos=2&amp;colorPos=7&amp;chairImgKey=&amp;backToPage=/servlet/quickSearch.jsp&amp;favorites=&amp;navDirection=detail&amp;searchType=library#"
+                     onclick="doPostBack();"><img src="./Product Specifications_files/icon_back.png" alt=""
+                        title=""></a>
+               </div>
+
+               <div id="icon_container" class="icons">
+                  <a class="icon_links"
+                     href="https://www.memosamples.com/servlet/quickSearchSpecs.jsp?prodNo=09104445&amp;patternPos=2&amp;colorPos=7&amp;chairImgKey=&amp;backToPage=/servlet/quickSearch.jsp&amp;favorites=&amp;navDirection=detail&amp;searchType=library#"
+                     onclick="addToCart();"><img src="./Product Specifications_files/icon_add.png" alt=""
+                        title=""></a><br>
+                  <br>
+
+                  <a class="icon_links"
+                     href="https://www.memosamples.com/servlet/quickSearchSpecs.jsp?prodNo=09104445&amp;patternPos=2&amp;colorPos=7&amp;chairImgKey=&amp;backToPage=/servlet/quickSearch.jsp&amp;favorites=&amp;navDirection=detail&amp;searchType=library#"
+                     onclick="addToFav();"><img src="./Product Specifications_files/icon_fav.png" alt=""
+                        title=""></a><br>
+                  <br>
+
+                  <a class="icon_links"
+                     href="https://www.memosamples.com/servlet/quickSearchSpecs.jsp?prodNo=09104445&amp;patternPos=2&amp;colorPos=7&amp;chairImgKey=&amp;backToPage=/servlet/quickSearch.jsp&amp;favorites=&amp;navDirection=detail&amp;searchType=library#"
+                     onclick="sendEmail();"><img src="./Product Specifications_files/icon_email.png" alt=""
+                        title=""></a><br>
+                  <br>
+
+                  <a class="icon_links"
+                     href="https://www.memosamples.com/servlet/quickSearchSpecs.jsp?prodNo=09104445&amp;patternPos=2&amp;colorPos=7&amp;chairImgKey=&amp;backToPage=/servlet/quickSearch.jsp&amp;favorites=&amp;navDirection=detail&amp;searchType=library#"
+                     onclick="viewDetails(&#39;Y&#39;);"><img src="./Product Specifications_files/icon_print.png" alt=""
+                        title=""></a><br>
+                  <br>
+
+                  <div id="download">
+                     <ul id="downloadList">
+                        <li class=""><span class="listIcon"><img src="./Product Specifications_files/icon_downloads.png"
+                                 alt="" title=""></span>
+                           <ul class="listTab" style="visibility: hidden; display: none;">
+                              <li class=""><span>Downloads:</span></li>
+
+                              <li class=""><a
+                                    href="https://www.memosamples.com/servlet/quickSearchSpecs.jsp?prodNo=09104445&amp;patternPos=2&amp;colorPos=7&amp;chairImgKey=&amp;backToPage=/servlet/quickSearch.jsp&amp;favorites=&amp;navDirection=detail&amp;searchType=library#"
+                                    onclick="downloadImage();">High
+                                    resolution image<img src="./Product Specifications_files/download_arrow.png" alt=""
+                                       title="" style="visibility: hidden;">
+                                 </a></li>
+
+                              <li class=""><a
+                                    href="https://www.memosamples.com/servlet/quickSearchSpecs.jsp?prodNo=09104445&amp;patternPos=2&amp;colorPos=7&amp;chairImgKey=&amp;backToPage=/servlet/quickSearch.jsp&amp;favorites=&amp;navDirection=detail&amp;searchType=library#"
+                                    onclick="downloadPDF(&#39;FG_09104357.pdf&#39;);">Finishes
+                                    guide<img src="./Product Specifications_files/download_arrow.png" alt="" title=""
+                                       style="visibility: hidden;">
+                                 </a></li>
+
+                              <li class=""><a
+                                    href="https://www.memosamples.com/servlet/quickSearchSpecs.jsp?prodNo=09104445&amp;patternPos=2&amp;colorPos=7&amp;chairImgKey=&amp;backToPage=/servlet/quickSearch.jsp&amp;favorites=&amp;navDirection=detail&amp;searchType=library#"
+                                    onclick="downloadPDF(&#39;FL_09104357.pdf&#39;);">Flame
+                                    certificate<img src="./Product Specifications_files/download_arrow.png" alt=""
+                                       title="" style="visibility: hidden;">
+                                 </a></li>
+
+                              <li class=""><a
+                                    href="https://www.memosamples.com/servlet/quickSearchSpecs.jsp?prodNo=09104445&amp;patternPos=2&amp;colorPos=7&amp;chairImgKey=&amp;backToPage=/servlet/quickSearch.jsp&amp;favorites=&amp;navDirection=detail&amp;searchType=library#"
+                                    onclick="downloadPDF(&#39;WA_09104357.pdf&#39;);">Warranty<img
+                                       src="./Product Specifications_files/download_arrow.png" alt="" title=""
+                                       style="visibility: hidden;"></a></li>
+
+                           </ul>
+                        </li>
+                     </ul>
+                  </div>
+
+
+                  <div id="zoomIconSpacer" class="">
+                     <br>
+                     <br>
+                  </div>
+
+                  <a class="icon_links "
+                     href="https://www.memosamples.com/servlet/quickSearchSpecs.jsp?prodNo=09104445&amp;patternPos=2&amp;colorPos=7&amp;chairImgKey=&amp;backToPage=/servlet/quickSearch.jsp&amp;favorites=&amp;navDirection=detail&amp;searchType=library#"
+                     id="zoomIcon" onclick="zoomImage();"><img src="./Product Specifications_files/icon_zoom.png" alt=""
+                        title=""></a> <br>
+                  <br>
+
+                  <div id="furniture">
+                     <ul id="furnitureList">
+                        <li class=""><span class="listIcon"><img src="./Product Specifications_files/icon_chair.png"
+                                 alt="" title=""></span>
+                           <ul class="listTab" style="visibility: hidden; display: none;">
+                              <li><span>Change Image:</span></li>
+
+                              <li><a href="https://www.memosamples.com/servlet/quickSearchSpecs.jsp?prodNo=09104445&amp;patternPos=2&amp;colorPos=7&amp;chairImgKey=&amp;backToPage=/servlet/quickSearch.jsp&amp;favorites=&amp;navDirection=detail&amp;searchType=library#"
+                                    onclick="swapChair(&#39;173_1333_702&#39;);">executive&nbsp;chair<img
+                                       src="./Product Specifications_files/download_arrow.png" alt="" title=""></a></li>
+
+                              <li><a href="https://www.memosamples.com/servlet/quickSearchSpecs.jsp?prodNo=09104445&amp;patternPos=2&amp;colorPos=7&amp;chairImgKey=&amp;backToPage=/servlet/quickSearch.jsp&amp;favorites=&amp;navDirection=detail&amp;searchType=library#"
+                                    onclick="swapChair(&#39;173_974_703&#39;);">lounge&nbsp;chair<img
+                                       src="./Product Specifications_files/download_arrow.png" alt="" title=""></a></li>
+
+                              <li><a href="https://www.memosamples.com/servlet/quickSearchSpecs.jsp?prodNo=09104445&amp;patternPos=2&amp;colorPos=7&amp;chairImgKey=&amp;backToPage=/servlet/quickSearch.jsp&amp;favorites=&amp;navDirection=detail&amp;searchType=library#"
+                                    onclick="showFabric();">fabric<img
+                                       src="./Product Specifications_files/download_arrow.png" alt="" title=""></a></li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </div>
+
+               </div>
+
+               <div id="image_views">
+
+                  <table width="375" border="0" cellspacing="0" cellpadding="0" class="spec_data">
+                     <tbody>
+                        <tr>
+                           <td width="273">&nbsp;</td>
+                           <!--
+					<td id="chairList" class="show" width="273">
+						<select name="sysModList" id="sysModList" class="noshow" onchange="swapChair(this.value);">
+							<option value="switch">
+								chair
+							</option>
+
+							<option value="173_1333_702" >
+								executive
+							</option>
+
+							<option value="173_974_703" >
+								lounge
+							</option>
+					
+						</select>
+					</td>
+							-->
+
+                        </tr>
+                     </tbody>
+                  </table>
+
+               </div>
+
+               <div id="spec_links">
+
+                  <span class="spec_data"><a
+                        href="https://www.memosamples.com/servlet/quickSearchSpecs.jsp?prodNo=09104445&amp;patternPos=2&amp;colorPos=7&amp;chairImgKey=&amp;backToPage=/servlet/quickSearch.jsp&amp;favorites=&amp;navDirection=detail&amp;searchType=library#"
+                        onclick="checkAvail();">availability
+                        [&gt;]</a>&nbsp;&nbsp;&nbsp;&nbsp; <a
+                        href="https://www.memosamples.com/servlet/quickSearchSpecs.jsp?prodNo=09104445&amp;patternPos=2&amp;colorPos=7&amp;chairImgKey=&amp;backToPage=/servlet/quickSearch.jsp&amp;favorites=&amp;navDirection=detail&amp;searchType=library#"
+                        onclick="viewPreApprovals();">pre-approvals [&gt;]</a>&nbsp;&nbsp;&nbsp;&nbsp;
+
+                     <a href="https://www.memosamples.com/servlet/quickSearchSpecs.jsp?prodNo=09104445&amp;patternPos=2&amp;colorPos=7&amp;chairImgKey=&amp;backToPage=/servlet/quickSearch.jsp&amp;favorites=&amp;navDirection=detail&amp;searchType=library#"
+                        onclick="downloadCleaningGuide();">cleaning guide
+                        [&gt;]</a> </span>
+               </div>
+            </div>
+         </div>
+
+
+         <div style="float: left;">
+
+            <script type="text/javascript">
+               $(document).ready(function () {
+                  var hide = false;
+                  $(".rss-link").hover(function () {
+                     if (hide) clearTimeout(hide);
+                     $("#rss-subscribe").fadeIn(250, function () {
+                        $(this).css('filter', '');
+                     });
+                  }, function () {
+                     hide = setTimeout(function () { $("#rss-subscribe").fadeOut("slow"); }, 250);
+                  });
+                  $("#rss-subscribe").hover(function () {
+                     if (hide) clearTimeout(hide);
+                  }, function () {
+                     hide = setTimeout(function () { $("#rss-subscribe").fadeOut("slow"); }, 250);
+                  });
+               });
+
+
+            </script>
+            <script type="text/javascript">
+< !--
+                  function MM_swapImgRestore() { //v3.0
+                     var i, x, a = document.MM_sr; for (i = 0; a && i < a.length && (x = a[i]) && x.oSrc; i++) x.src = x.oSrc;
+                  }
+               function MM_preloadImages() { //v3.0
+                  var d = document; if (d.images) {
+                     if (!d.MM_p) d.MM_p = new Array();
+                     var i, j = d.MM_p.length, a = MM_preloadImages.arguments; for (i = 0; i < a.length; i++)
+                        if (a[i].indexOf("#") != 0) { d.MM_p[j] = new Image; d.MM_p[j++].src = a[i]; }
+                  }
+               }
+
+               function MM_findObj(n, d) { //v4.01
+                  var p, i, x; if (!d) d = document; if ((p = n.indexOf("?")) > 0 && parent.frames.length) {
+                     d = parent.frames[n.substring(p + 1)].document; n = n.substring(0, p);
+                  }
+                  if (!(x = d[n]) && d.all) x = d.all[n]; for (i = 0; !x && i < d.forms.length; i++) x = d.forms[i][n];
+                  for (i = 0; !x && d.layers && i < d.layers.length; i++) x = MM_findObj(n, d.layers[i].document);
+                  if (!x && d.getElementById) x = d.getElementById(n); return x;
+               }
+
+               function MM_swapImage() { //v3.0
+                  var i, j = 0, x, a = MM_swapImage.arguments; document.MM_sr = new Array; for (i = 0; i < (a.length - 2); i += 3)
+                     if ((x = MM_findObj(a[i])) != null) { document.MM_sr[j++] = x; if (!x.oSrc) x.oSrc = x.src; x.src = a[i + 2]; }
+               }
+//-->
+            </script>
+            <div id="navigation_static">
+               <div class="menu">
+                  <div class="leftnavmenu"> <a
+                        href="https://www.memosamples.com/servlet/QuickSearch?brand=81&amp;choice=0"
+                        id="leftnavsub_services" class="LeftNav">Products</a> </div>
+                  <div class="leftnavmenu"> <a href="https://www.memosamples.com/momentum_textiles_news.shtml"
+                        id="leftnavsub_markets" class="LeftNav">News</a> </div>
+                  <div class="leftnavmenu"> <a href="https://www.memosamples.com/contract_textile_awards.shtml"
+                        id="leftnavsub_environmental_design" class="LeftNav">Awards</a> </div>
+                  <div class="leftnavmenu"> <a href="https://www.memosamples.com/momentum_group_textile_design.shtml"
+                        id="leftnavsub_design" class="LeftNav">Design</a> </div>
+                  <div class="leftnavmenu"> <a href="https://www.memosamples.com/photos.shtml" id="leftnavsub_design"
+                        class="LeftNav">Photos</a> </div>
+                  <div class="leftnavmenu"> <a href="https://www.memosamples.com/environment.shtml"
+                        class="rss-link">Environment</a> </div>
+               </div>
+            </div>
+            <div id="brand_navigation">
+               <ul>
+                  <li><a href="https://www.memosamples.com/servlet/QuickSearch?brand=50&amp;choice=0">Sina Pearson</a>
+                  </li>
+                  <li><a href="https://www.memosamples.com/servlet/QuickSearch?brand=40&amp;choice=0">LoomSource</a>
+                  </li>
+                  <li><a href="https://www.memosamples.com/servlet/QuickSearch?brand=61&amp;choice=0"><img
+                           src="./Product Specifications_files/momentum_wallcovering_logo.gif" height="17"
+                           alt="Momentum Wallcovering" title=""></a></li>
+                  <!-- <li><a href="/servlet/QuickSearch?brand=21&choice=0">Textus</a></li> -->
+               </ul>
+            </div>
+
+
+         </div>
+
+
+         <div id="footer_static">
+
+
+
+            <a href="https://www.memosamples.com/about_momentum_group.shtml" style="float:left;">Who We Are</a>
+            <img src="./Product Specifications_files/spacer.gif" width="20" height="1" style="float:left" alt=""
+               title="">
+            <a href="https://www.memosamples.com/momentum_group_news.shtml" style="float:left;">News</a>
+            <img src="./Product Specifications_files/spacer.gif" width="20" height="1" style="float:left" alt=""
+               title="">
+            <a href="https://www.memosamples.com/momentum_group_awards.shtml" style="float:left;">Awards</a>
+            <img src="./Product Specifications_files/spacer.gif" width="20" height="1" style="float:left" alt=""
+               title="">
+            <a href="https://www.memosamples.com/momentum_group_terms_and_conditions.shtml" style="float:left;">Terms
+               &amp; Conditions</a>
+            <img src="./Product Specifications_files/spacer.gif" width="20" height="1" style="float:left" alt=""
+               title="">
+            <a href="https://www.memosamples.com/contact_momentum_group.shtml" style="float:left;">Contact Us</a>
+            <img src="./Product Specifications_files/spacer.gif" width="20" height="1" style="float:left" alt=""
+               title="">
+            <a href="https://www.memosamples.com/servlet/QuickSearch?choice=6" style="float:left;">Return Samples</a>
+            <img src="./Product Specifications_files/spacer.gif" width="20" height="1" style="float:left" alt=""
+               title="">
+            <a href="https://www.memosamples.com/momentum_group_faq.shtml" style="float:left;">FAQ</a>
+
+
+         </div>
+
+         <div id="copyright_static">&nbsp;</div>
+
+      </div>
+
+      <input type="hidden" name="navDirection" id="navDirection" value="searchReturn">
+      <input type="hidden" name="searchType" id="searchType" value="library">
+      <input type="hidden" name="returnPage" id="returnPage" value="quickSearchSpecs.jsp">
+      <input type="hidden" name="itemToAdd" id="itemToAdd" size="-1" value="2">
+      <input type="hidden" name="colorWayToAdd" id="colorWayToAdd" size="-1" value="7">
+      <input type="hidden" name="colorWaySku" id="colorWaySku" size="-1" value="09104445">
+      <input type="hidden" name="showChair" id="showChair" size="-1" value="N">
+      <input type="hidden" name="stdImgHidden" id="stdImgHidden" size="-1" value="ace-hot.jpg">
+      <input type="hidden" name="chairImgKey" id="chairImgKey" size="-1" value="">
+      <input type="hidden" name="fullProdName" id="fullProdName" size="-1" value="Ace - Hot">
+      <input type="hidden" name="fabricZoomFlag" id="fabricZoomFlag" size="-1" value="Y">
+      <input type="hidden" name="colorPos" id="colorPos" size="-1" value="7">
+      <input type="hidden" name="siteBrand" id="siteBrand" size="-1" value="81">
+   </form>
+   <form action="https://www.memosamples.com/servlet/QuickSearch" name="pageBack" id="pageBack" method="post">
+      <input type="hidden" name="referrerKey" id="referrerKey" size="-1" value="quickSearchSpecs.jsp"> <input
+         type="hidden" name="navDirection" id="navDirection" size="-1" value="back"> <input type="hidden"
+         name="mfgSpaceID" id="mfgSpaceID" size="-1" value="">
+   </form>
+
+   <script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+   </script>
+   <script src="./Product Specifications_files/ga.js.download" type="text/javascript"></script>
+   <script type="text/javascript">
+      var pageTracker = _gat._getTracker("UA-6182312-2");
+      pageTracker._trackPageview();
+   </script>
+
+
+   <div id="tiptip_holder" style="max-width: 200px; margin: 256px 0px 0px 1101px; display: none;" class="tip_right">
+      <div id="tiptip_arrow" style="margin-left: -12px; margin-top: 5px;">
+         <div id="tiptip_arrow_inner"></div>
+      </div>
+      <div id="tiptip_content">zoom</div>
+   </div>
+</body>
+
+</html>

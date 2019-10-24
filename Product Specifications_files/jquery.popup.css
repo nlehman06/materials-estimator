@@ -1,0 +1,90 @@
+#backgroundPopup{
+	display:none;
+	position:fixed;
+	_position:absolute; /* hack for internet explorer 6*/
+	height:100%;
+	width:100%;
+	top:0;
+	left:0;
+	background:#000000;
+	border:1px solid #cecece;
+	z-index:998;
+}
+
+#popupContact{
+	display:none;
+	position:fixed;
+	_position:absolute; /* hack for internet explorer 6*/
+	/* height:384px; */
+	width:390px;
+	/* background:#FFFFFF;*/
+	/* border:2px solid #cecece; */
+	z-index:999;
+	padding:12px;
+	/* font-size:13px; */
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size:0.68em;
+	color: #333;
+	line-height: 18px;
+	margin-top: 0px;
+	background-color:#FFF;
+	/* width:400px; */
+	padding:15px 20px 15px 20px;
+	text-align:left;
+	border:solid 1px #FF690A;
+}
+
+#popupContact h1{
+	text-align:left;
+	color:#6FA5FD;
+	font-size:22px;
+	font-weight:700;
+	border-bottom:1px dotted #D3D3D3;
+	padding-bottom:2px;
+	margin-bottom:20px;	
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	color: #333;
+}
+
+#popupContact a {
+	color: #FF690A;
+	text-decoration: none;
+	outline: none;
+}
+#popupContactClose{
+	/*font-size:14px;*/
+	/*line-height:14px;
+	right:6px;
+	top:4px;
+	position:absolute;*/
+	/*color:#6fa5fd;
+	font-weight:700;*/
+	/*display:block;*/
+	background: #ffffff url(./images/close_box.gif) no-repeat right;
+	color:#FF690A;
+	text-decoration:none;
+	float: right;
+	border: 0;
+	width: 16px;
+	height: 16px;
+	margin:-5px -15px 0px 0px;
+}
+#button{
+	text-align:center;
+	margin:100px;
+}
+#popupThumbnail{
+	float: left;
+	margin-right: 15px;
+	width: 65px;
+	height: 65px;
+}
+.popup_divider {
+	border-bottom: solid 1px #CCC;
+	margin-top:-5px;
+	height:20px;
+	margin-bottom:10px;
+}
+#contactArea {
+	max-width: 385px;
+}

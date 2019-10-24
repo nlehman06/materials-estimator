@@ -1,0 +1,98 @@
+/*
+function getCookie(name) {
+   var result = null;
+   var myCookie = " " + document.cookie + ";";
+   var searchName = " " + name + "=";
+   var startOfCookie = myCookie.indexOf(searchName);
+   var endOfCookie;
+
+   if (startOfCookie != -1) {
+      startOfCookie += searchName.length; // skip past cookie name
+      endOfCookie = myCookie.indexOf(";", startOfCookie);
+      result = unescape(myCookie.substring(startOfCookie, endOfCookie));
+   }
+   return result;
+}
+*/
+
+function getCookieVal(offset) {
+   var endstr = document.cookie.indexOf (";", offset);
+
+   if (endstr == -1) {
+      endstr = document.cookie.length;
+   }
+   return unescape(document.cookie.substring(offset, endstr));
+}
+
+function GetCookie(name) {
+   var arg = name + "=";
+   var alen = arg.length;
+   var clen = document.cookie.length;
+   var i = 0;
+
+   while (i < clen) {
+      var j = i + alen;
+
+      if (document.cookie.substring(i, j) == arg) {
+         return getCookieVal (j);
+      }
+      i = document.cookie.indexOf(" ", i) + 1;
+
+      if (i == 0) break;
+   }
+   return null;
+}
+
+function SetCookie(name, value) {
+   var argv = SetCookie.arguments;
+   var argc = SetCookie.arguments.length;
+   var expires = (argc > 2) ? argv[2] : null;
+   var path = (argc > 3) ? argv[3] : null;
+   var domain = (argc > 4) ? argv[4] : null;
+   var secure = (argc > 5) ? argv[5] : false;
+
+   document.cookie = name + "=" + escape (value) +
+        ((expires == null) ? "" : ("; expires=" + expires.toGMTString())) +
+        ((path == null) ? "" : ("; path=" + path)) +
+        ((domain == null) ? "" : ("; domain=" + domain)) +
+        ((secure == true) ? "; secure" : "");
+}
+
+function DeleteCookie (name) {
+   var exp = new Date();
+   exp.setTime (exp.getTime() - 1000000000);  // This cookie is history (changed -1 to make it previous time)
+   var cval = GetCookie (name);
+   document.cookie = name + "=" + cval + "; expires=" + exp.toGMTString();
+   //alert("The cookie has been deleted.");
+}
+
+/* JAH - new functions added below 02-03-05  */
+function createCookie(name,value,days)
+{
+	if (days)
+	{
+		var date = new Date();
+		date.setTime(date.getTime()+(days*24*60*60*1000));
+		var expires = "; expires="+date.toGMTString();
+	}
+	else var expires = "";
+	document.cookie = name+"="+value+expires+"; path=/";
+}
+
+function readCookie(name)
+{
+	var nameEQ = name + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0;i < ca.length;i++)
+	{
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1,c.length);
+		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+	}
+	return null;
+}
+
+function eraseCookie(name)
+{
+	createCookie(name,"",-1);
+}

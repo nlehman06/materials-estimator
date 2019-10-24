@@ -1,0 +1,118 @@
+#backgroundPopupLogin{
+	display:none;
+	position:fixed;
+	_position:absolute; /* hack for internet explorer 6*/
+	height:100%;
+	width:100%;
+	top:0;
+	left:0;
+	background:#000000;
+	border:1px solid #cecece;
+	z-index:998;
+}
+#backgroundPopupReminder{
+	display:none;
+	position:fixed;
+	_position:absolute; /* hack for internet explorer 6*/
+	height:100%;
+	width:100%;
+	top:0;
+	left:0;
+	background:#000000;
+	border:1px solid #cecece;
+	z-index:998;
+}
+#popupContactLogin{
+	display:none;
+	position:fixed;
+	_position:absolute; /* hack for internet explorer 6*/
+	z-index:999;
+	padding:12px;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size:0.68em;
+	color: #333;
+	line-height: 18px;
+	margin-top: 0px;
+	background-color:#FFF;
+	padding:15px 25px 15px 20px;
+	text-align:left;
+	border:solid 1px #FF690A;
+
+
+}
+#popupContactReminder{
+	display:none;
+	position:fixed;
+	_position:absolute; /* hack for internet explorer 6*/
+	z-index:999;
+	padding:12px;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size:0.68em;
+	color: #333;
+	line-height: 18px;
+	margin-top: 0px;
+	background-color:#FFF;
+	padding:15px 25px 15px 20px;
+	text-align:left;
+	border:solid 1px #FF690A;
+
+
+}
+#popupContactLogin h1{
+	text-align:left;
+	color:#6FA5FD;
+	font-size:22px;
+	font-weight:700;
+	border-bottom:1px dotted #D3D3D3;
+	padding-bottom:2px;
+	margin-bottom:20px;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	color: #333;
+}
+#popupContactReminder h1{
+	text-align:left;
+	color:#6FA5FD;
+	font-size:22px;
+	font-weight:700;
+	border-bottom:1px dotted #D3D3D3;
+	padding-bottom:2px;
+	margin-bottom:20px;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	color: #333;
+}
+#popupContactLogin a {
+	color: #FF690A;
+	text-decoration: none;
+	outline: none;
+}
+#popupContactReminder a {
+	color: #FF690A;
+	text-decoration: none;
+	outline: none;
+}
+#popupContactCloseLogin {
+	background: #ffffff url(/images/close_box.gif) no-repeat right;
+	color:#FF690A;
+	text-decoration:none;
+	float: right;
+	border: 0;
+	width: 16px;
+	height: 16px;
+	margin:-5px -15px 0px 0px;
+}
+#popupContactCloseReminder {
+	background: #ffffff url(/images/close_box.gif) no-repeat right;
+	color:#FF690A;
+	text-decoration:none;
+	float: right;
+	border: 0;
+	width: 16px;
+	height: 16px;
+	margin:-5px -15px 0px 0px;
+}
+#contactAreaLogin {
+	max-width: 600px;
+}
+#contactAreaReminder {
+	max-width: 600px;
+}

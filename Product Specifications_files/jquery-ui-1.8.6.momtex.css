@@ -1,0 +1,35 @@
+.ui-slider .ui-slider-handle{
+	position: absolute;
+	z-index: 2;
+	width: 1.7em;
+	height: 1.5em;
+	cursor: default;
+	outline-style: none;
+}
+.ui-slider-horizontal {
+	height: 1em;
+	filter: alpha(opacity=0);	
+	background: url(../images/blank.gif) no-repeat; height: 1em;
+	border-style: none;
+}
+.ui-slider-horizontal .ui-slider-handle{
+	top: -.35em;
+	margin-left: -.8em;
+	
+	background: url(/images/sldr_handle.gif) no-repeat;
+	border-style: none;
+}
+.ui-slider-horizontal .ui-slider-range {
+	top: 0;
+	height: 10%;
+}
+.tooltip {
+	display:none;
+	background:transparent url(../images/white_arrow.png);
+	font-size:12px;
+	height:70px;
+	width:160px;
+	padding:25px;
+	color:#000;
+	z-index: 3;
+}
