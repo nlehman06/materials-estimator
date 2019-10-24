@@ -88,3 +88,38 @@
 #contactArea {
 	max-width: 385px;
 }
+
+
+#popupEstimator{
+	display:none;
+	position:fixed;
+	_position:absolute; /* hack for internet explorer 6*/
+	width:335px;
+	z-index:999;
+	padding:12px;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size:0.68em;
+	color: #333;
+	line-height: 18px;
+	margin-top: 0px;
+	background-color:#FFF;
+	padding:15px 20px 15px 20px;
+	text-align:left;
+	border:solid 1px #FF690A;
+}
+
+#popupEstimator a {
+	color: #FF690A;
+	text-decoration: none;
+	outline: none;
+}
+#popupEstimatorClose{
+	background: #ffffff url(./images/close_box.gif) no-repeat right;
+	color:#FF690A;
+	text-decoration:none;
+	float: right;
+	border: 0;
+	width: 16px;
+	height: 16px;
+	margin:-5px -15px 0px 0px;
+}

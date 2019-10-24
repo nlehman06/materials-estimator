@@ -700,6 +700,11 @@
          checkAvailCall(0, skuToCheck);
       }
 
+      function wallcoveringEstimator() {
+         centerEstimatorPopup()
+         loadEstimatorPopup()
+      }
+
       function checkAvailCall(count, skuToCheck) {
 
          count++;
@@ -1238,15 +1243,20 @@
                   $("#popupContactClose").click(function () {
                      disablePopup();
                   });
+                  $("#popupEstimatorClose").click(function () {
+                     disableEstimatorPopup();
+                  });
                   //Click out event!
                   $("#backgroundPopup").click(function () {
                      disablePopup();
+                     disableEstimatorPopup();
                   });
                });
 
                //SETTING UP OUR POPUP  
                //0 means disabled; 1 means enabled;  
                var popupStatus = 0;
+               var popupEstimatorStatus = 0;
 
 
                //loading popup with jQuery magic!
@@ -1279,6 +1289,36 @@
                      loadSpecificPopup(lastDialogue);
                   }
                }
+               //loading estimator popup with jQuery magic!
+               function loadEstimatorPopup() {
+                  //loads popup only if it is disabled
+                  if (popupEstimatorStatus == 0) {
+                     $("#backgroundPopup").css({
+                        "opacity": "0.6"
+                     });
+                     $("#backgroundPopup").fadeIn("slow");
+                     $("#popupEstimator").fadeIn("slow");
+                     popupEstimatorStatus = 1;
+                  }
+               }
+
+
+               //disabling estimator popup with jQuery magic!
+               function disableEstimatorPopup() {
+                  //disables popup only if it is enabled
+                  if (popupEstimatorStatus == 1) {
+                     $("#backgroundPopup").fadeOut("slow");
+                     $("#popupEstimator").fadeOut("slow");
+                     popupEstimatorStatus = 0;
+                  }
+
+                  //see if another popup needs to be loaded now
+                  var lastDialogue = document.getElementById("lastDialogue").value;
+                  if (lastDialogue.length > 0) {
+                     document.getElementById("lastDialogue").value = "";
+                     loadSpecificPopup(lastDialogue);
+                  }
+               }
 
                //centering popup
                function centerPopup() {
@@ -1289,6 +1329,26 @@
                   var popupWidth = $("#popupContact").width();
                   //centering
                   $("#popupContact").css({
+                     "position": "absolute",
+                     "top": windowHeight / 2 - popupHeight / 2 - 20,
+                     "left": windowWidth / 2 - popupWidth / 2 - 20
+                  });
+                  //only need force for IE6
+
+                  $("#backgroundPopup").css({
+                     "height": windowHeight
+                  });
+
+               }
+               //centering estimator popup
+               function centerEstimatorPopup() {
+                  //request data for centering
+                  var windowWidth = document.documentElement.clientWidth;
+                  var windowHeight = document.documentElement.clientHeight;
+                  var popupHeight = $("#popupEstimator").height();
+                  var popupWidth = $("#popupEstimator").width();
+                  //centering
+                  $("#popupEstimator").css({
                      "position": "absolute",
                      "top": windowHeight / 2 - popupHeight / 2 - 20,
                      "left": windowWidth / 2 - popupWidth / 2 - 20
@@ -1313,6 +1373,38 @@
                   loadPopup();
                }
 
+               function estimate() {
+                  $('#estimator_results').css({ display: "none" })
+
+                  var perimeter = parseFloat($('#perimeterInput').val());
+                  var height = parseFloat($('#heightInput').val());
+                  var veritcalRepeat = parseFloat($('#verticalRepeatInput').val());
+                  var rollWidth = parseFloat($('#rollWidthInput').val());
+                  var waste = parseFloat($('#wasteInput').val());
+
+                  if (perimeter != perimeter || height != height || rollWidth != rollWidth) {
+                     alert('perimeter, height and roll width must all be filled in with numbers');
+                  } else {
+                     if (veritcalRepeat != veritcalRepeat) {
+                        var veritcalRepeat = 0;
+                     }
+                     if (waste != waste) {
+                        var waste = 0;
+                     }
+                     var totalHeight = height + (veritcalRepeat / 12);
+                     var totalSquareFeet = (perimeter * totalHeight) * (1 + (waste / 100));
+                     var totalSquareFeetRounded = Math.ceil(totalSquareFeet).toLocaleString();
+                     var totalSquareYardsRounded = Math.ceil(totalSquareFeet / 9).toLocaleString();
+                     var totalLinearYards = Math.ceil(totalSquareFeet / (rollWidth / 12 * 3)).toLocaleString();
+
+                     $('#sq_ft_needed').html(totalSquareFeetRounded);
+                     $('#sq_yd_needed').html(totalSquareYardsRounded);
+                     $('#ln_yd_needed').html(totalLinearYards);
+
+                     $('#estimator_results').css({ display: "block" })
+                  }
+               }
+
             </script>
 
             <div id="popupContact" style="position: absolute; top: 419px; left: 745px; display: none;">
@@ -1321,6 +1413,67 @@
                <div id="contactArea"><img id="popupThumbnail" src="./Product Specifications_files/cace-hot.jpg">
                   <div><span style="margin-bottom: 10px;"><strong>Ace - Hot</strong></span></div>
                   <div>83.1&nbsp;&nbsp;yards in stock (US).</div>
+               </div>
+            </div>
+            <div id="popupEstimator" style="position: absolute; top: 319px; left: 745px; display: none;">
+               <a id="popupEstimatorClose"></a>
+               <h2 style="font-weight:100; font-size:2em; margin-block-end: 0;">Materials Estimator</h2>
+               <div class="popup_divider"></div>
+               <div id="estimatorArea">
+                  <div style="display: -webkit-box; display: -ms-flexbox; display: flex;">
+                     <div style="width: 52%; border-right: solid 1px #CCCCCC; padding-right: 10px; padding-top: 10px;">
+                        <div
+                           style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+                           <div>
+                              <div style="margin-bottom: 6px; display: flex; justify-content: flex-end;">
+                                 <span>Perimeter</span>
+                                 <input id="perimeterInput" type="text" size="4"
+                                    style="margin-right: 4px; margin-left: 4px; text-align: right;">
+                                 <span style="width:10px;">ft.</span>
+                              </div>
+                              <div style="margin-bottom: 6px; display: flex; justify-content: flex-end;">
+                                 <span>Height</span>
+                                 <input id="heightInput" type="text" size="4"
+                                    style="margin-right: 4px; margin-left: 4px; text-align: right;">
+                                 <span style="width:10px;">ft.</span>
+                              </div>
+                              <div style="margin-bottom: 6px; display: flex; justify-content: flex-end;">
+                                 <span>Vertical Repeat</span>
+                                 <input id="verticalRepeatInput" type="text" size="4"
+                                    style="margin-right: 4px; margin-left: 4px; text-align: right;">
+                                 <span style="width:10px;">in.</span>
+                              </div>
+                              <div style="margin-bottom: 6px; display: flex; justify-content: flex-end;">
+                                 <span>Roll Width</span>
+                                 <input id="rollWidthInput" type="text" size="4"
+                                    style="margin-right: 4px; margin-left: 4px; text-align: right;">
+                                 <span style="width:10px;">in.</span>
+                              </div>
+                              <div style="margin-bottom: 6px; display: flex; justify-content: flex-end;">
+                                 <span>Waste</span>
+                                 <input id="wasteInput" type="text" size="4"
+                                    style="margin-right: 4px; margin-left: 4px; text-align: right;">
+                                 <span style="width:10px;">%</span>
+                              </div>
+                           </div>
+                           <div style="text-align: right; padding-right: 14px; margin-top: 20px;">
+                              <a href="#" onclick="estimate()">calculate [>]</a>
+                           </div>
+                        </div>
+                     </div>
+                     <div style="width: 48%; padding-top: 10px; padding-left: 10px;">
+                        <div
+                           style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+                           <div style="font-weight: 600;">Material Needed:</div>
+                           <div id="estimator_results" style="display:none; font-weight: 600;">
+                              <div><span id="sq_ft_needed"></span> square feet</div>
+                              <div><span id="sq_yd_needed"></span> square yards</div>
+                              <div><span id="ln_yd_needed"></span> linear yards</div>
+                           </div>
+                           <div>for exact yardage,<br>contact customer service at (800) 366-6839</div>
+                        </div>
+                     </div>
+                  </div>
                </div>
             </div>
             <div id="backgroundPopup" style="height: 969px; opacity: 0.6; display: none;"></div>
@@ -1724,6 +1877,13 @@
                         </li>
                      </ul>
                   </div>
+                  <br>
+                  <br>
+
+                  <a class="icon_links " id="calcIcon" onclick="wallcoveringEstimator();"><img
+                        src="./Product Specifications_files/icon_calc.png" alt="" title=""
+                        style="width: 13px; height: 13px;"></a>
+                  <br>
 
                </div>
 
